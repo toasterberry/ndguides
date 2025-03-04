@@ -1,7 +1,7 @@
 ---
 label: Timer
 layout: page
-order: 2
+order: -2
 icon: checklist
 ---
 
