@@ -1,7 +1,7 @@
 ---
 label: Getting Started
 layout: page
-order: -1
+order: -10
 icon: checklist
 ---
 

@@ -1,8 +1,8 @@
 ---
 label: Timer
 layout: page
-order: -2
-icon: checklist
+order: -20
+icon: stopwatch
 ---
 
 # Timer
