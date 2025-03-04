@@ -1,0 +1,18 @@
+input: .
+output: .retype
+url: https://toasterberry.github.io/ndguides/
+branding:
+  title: NDGuides
+
+links:
+  - text: Home
+    link: /welcome.md
+    icon: home
+
+footer:
+  copyright: "Temp Footer!"
+  links:
+    - text: License
+      link: license.md
+
+favicon: static/favicon.png
