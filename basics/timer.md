@@ -1,7 +1,7 @@
 ---
 label: Timer
 layout: page
-order: -20
+order: -30
 icon: stopwatch
 ---
 
