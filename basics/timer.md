@@ -23,11 +23,11 @@ Afterwards, enable "Global Hotkeys", and click OK.
 
 Your timer is still really short and doesn't do much besides starting and stopping. Let's fix that. Right click the timer, then click "Edit Splits". Here you can set the game and category you're running. Immediately you'll see LiveSplit take shape.
 
-image
+![](/images/timer/TakingShape.avif)
 
-Now let's fill up that empty space. A "split" is a point you can add in your timer to represent some kind of event from the game, often things like reaching an area, or completing a puzzle. Similar to a "lap" in a race. This breaks your run up into smaller segments so you can track your performance throughout different portions of the game. They can also be used to see a best theoretical time using your best times for each split. To add splits, click the "Insert Above/Below" button on the left. You can name them anything you want, they don't have to match anything. You can add as many or as few as you like. Your last split in this list will be treated as your end split.
+Now let's fill up that empty space. A "split" is a point you can add in your timer to represent some kind of event from the game, often things like reaching an area, or completing a puzzle. It's similar to a "lap" in a race. This breaks your run up into smaller segments so you can track your performance throughout different portions of the game. They can also be used to see a best theoretical time using your best times for each split. To add splits, click the "Insert Above/Below" button on the left. You can name them anything you want, they don't have to match anything. You can add as many or as few as you like. Your last split in this list will be treated as your end split.
 
-image
+![](/images/timer/SplitsWrittenOut.avif)
 
 ## Autosplitters
 
@@ -35,7 +35,7 @@ Autosplitters automate your timer for you. This allows you to focus on the game 
 
 It's important to note that the automatic splits simply press your split hotkey when it sees you're at a certain part of the game. This means you have to ensure the amount of splits you have match the split checkboxes you ticked in the settings. If you wanted to split at 3 unique points in game, you'd enable 3 of the corresponding checkboxes, add 3 uniquely named splits, plus your ending split.
 
-image
+![](/images/timer/AutosplitterSplits.avif)
 
 Autosplitters should work seamlessly once they're activated. They can detect when the game is open/closed, and should start once you select a difficulty. If you're having trouble with an autosplitter, see "Autosplitter Troubleshooting" at the bottom of this page.
 
@@ -47,7 +47,9 @@ To change the look of the general layout, click "Layout Settings" at the bottom 
 
 You can also adjust the size of the window by hovering over the edges and corners of the main timer window. Having it larger will make it look clearer in your recordings.
 
-Just like that, you have a fully setup and fancy looking timer! Save your layout and splits by right clicking the main timer window. You can use the same layout across multiple games, or make new ones, but splits are game and category specific. If you need to change game/category, right click the timer, click "Close Splits", and edit the splits from scratch like before.
+Just like that, you have a fully setup and fancy looking timer! Save your layout and splits by right clicking the main timer window. You can use the same layout across multiple games if you want, but splits are game and category specific. Each game and category you setup should have their own splits file. If you need to change the game/category, right click the timer, click "Close Splits", and edit the splits from scratch like before.
+
+![](/images/timer/Customized.avif)
 
 ## Extra Tips
 
@@ -64,5 +66,5 @@ Partial functionality usually happens when you accidentally have two autosplitte
 ==- How do I use an .asl file?
 Right click your timer, click "Edit Layout", click the + at the top left, hover over "control", click "Scriptable Auto Splitter" to add it to the list. Double click it in the list, click "Browse" and find the .asl you downloaded. Configuration now is the same as before.
 ==- What is auto reset?
-Auto reset will automatically reset your timer for you at the difficulty select screen under certain circumstances. This is useful if you're resetting a lot at the start of a run. It won't activate if you already completed a run and haven't manually reset your timer, or if you got a new best split.
+Auto reset will automatically reset your timer at the difficulty select screen under certain circumstances. This is useful if you're resetting a lot at the start of a run. It won't activate if you already completed a run and haven't manually reset your timer, or if you got a new best split.
 ==-
