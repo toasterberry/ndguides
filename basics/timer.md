@@ -7,13 +7,13 @@ icon: stopwatch
 
 # Timer
 
-The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout. Although you can use any kind of timer, [LiveSplit](https://livesplit.org/) is the go-to. It's very customizable and has support for autosplitters, but only for Windows?. It may seem intimidating to setup, but it's very straight forward.
+The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout. Although you can use any kind of timer, [LiveSplit](https://livesplit.org/) is the go-to. It's very customizable and has support for autosplitters. It may seem intimidating to setup, but it's very straight forward.
 
 ## Basic Setup
 
 Head to https://livesplit.org/ and download LiveSplit. Navigate to the newly downloaded file, right click it, click "Extract all", then "Extract". You'll now have a folder that contains the program. You can put this anywhere you like. In the folder, double click "LiveSplit" to open it. A small black window will pop up. This is LiveSplit at its core, but it's easy to make it look much better.
 
-image
+![](/images/timer/LiveSplitNew.avif)
 
 First, let's go over basic settings. Right click the black window, and click "Settings". You can adjust the hotkeys for everything as you like. Try to find some keys you won't naturally use, and won't accidentally press. Common choices are numpad or Insert/Home/End keys. 
 
