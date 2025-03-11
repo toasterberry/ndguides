@@ -6,7 +6,7 @@ icon: home
 # Home
 
 !!!
-This site is under construction!
+This site is under construction! Some information may be placeholder or incorrect while the site is being written and reviewed.
 !!!
 
 Welcome to NDGuides! This site serves as both an introduction to speedrunning the Nancy Drew series, as well as an up-to-date collection of relevant resources.
