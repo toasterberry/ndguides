@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/ndguides">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.794400189547">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795011467290">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,7 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>OBS Tips</title>
     <meta name="title" content="OBS Tips">
-    <meta name="description" content="The.">
+    <meta name="description" content="Here's some tips for making your OBS recordings/stream look good with the games.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://toasterberry.github.io/ndguides/advanced/obs-tips/">
@@ -21,21 +21,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://toasterberry.github.io/ndguides/advanced/obs-tips/">
     <meta property="og:title" content="OBS Tips">
-    <meta property="og:description" content="The.">
+    <meta property="og:description" content="Here's some tips for making your OBS recordings/stream look good with the games.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://toasterberry.github.io/ndguides/advanced/obs-tips/">
     <meta property="twitter:title" content="OBS Tips">
-    <meta property="twitter:description" content="The.">
+    <meta property="twitter:description" content="Here's some tips for making your OBS recordings/stream look good with the games.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.794400189547" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.795011467290" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794400189547" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.795011467290" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794400189547" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.795011467290" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -184,7 +184,31 @@
         <span>OBS Tips</span>
     </h1>
 </doc-anchor-target>
-<p>The.</p>
+<p>Here&#x27;s some tips for making your OBS recordings/stream look good with the games.</p>
+<doc-anchor-target id="displaying-the-game">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#displaying-the-game">#</doc-anchor-trigger>
+        <span>Displaying the Game</span>
+    </h2>
+</doc-anchor-target>
+<p>When using a display capture to capture the older games in full screen, you&#x27;ll notice you get a small box at the top left corner with a thick white border around it. You can stretch it up easily but it&#x27;ll look blurry and still have the white border.</p>
+<p>Left click your display capture, hold CTRL and press E. To get rid of the white borders, enter &quot;2&quot; in the left, right, top, and bottom crop values.</p>
+<p>To get it to scale properly, change &quot;Bounding Box Top&quot; to &quot;Scale to inner bounds&quot;. You can change &quot;Alignment in Bounding Box&quot; to Center Left or Center Right depending on your preference, and where you&#x27;d like any other elements. This part applies to any of the games.</p>
+<p>If you&#x27;d like to make the image clearer, right click your Display Capture, hover over &quot;Scale Filtering&quot;, and choose one. &quot;Area&quot; looks clean and sharp, but some may not like the harsh pixels. &quot;Bicubic&quot; is sharper than default and smoother than Area, but can add gross artifacts.</p>
+<doc-anchor-target id="audio-capture">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#audio-capture">#</doc-anchor-trigger>
+        <span>Audio Capture</span>
+    </h2>
+</doc-anchor-target>
+<p>If you&#x27;re recording your runs, there might be times you want to have other audio playing on your computer that you might not want in your recordings. To isolate your game&#x27;s audio, right click in the &quot;Sources&quot; window, hover over &quot;Add&quot;, and add &quot;Application Audio Capture&quot;. Double click it, and select your game. You can now mute your desktop audio and only have the audio from your game, allowing you to listen to music, talk to someone, or anything else.</p>
+<p>If you&#x27;d like, you can have more control by managing this with audio tracks. Click &quot;Settings&quot;, &quot;Output&quot;, &quot;Recording&quot;, and here you can add more audio tracks. These allow you to record a video with several isolated audio tracks that you can record different things to. Select how many you want, apply, and close the settings. Click the 3 dots of anything in the audio mixer, then &quot;Advanced Audio Properties&quot;. This is where you can assign what audio sources get recorded to what tracks. If you don&#x27;t have a use for this, you don&#x27;t really need to set it up. You can just manage mixing everything on 1 track.</p>
+<doc-anchor-target id="livesplit">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#livesplit">#</doc-anchor-trigger>
+        <span>Livesplit</span>
+    </h2>
+</doc-anchor-target>
 
                                 
                                 <!-- Required only on API pages -->

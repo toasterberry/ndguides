@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/ndguides">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.794400189547">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.795011467290">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.6.0">
@@ -12,6 +12,7 @@
     <!-- Primary Meta Tags -->
     <title>Timer</title>
     <meta name="title" content="Timer">
+    <meta name="description" content="The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://toasterberry.github.io/ndguides/basics/timer/">
@@ -20,19 +21,21 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://toasterberry.github.io/ndguides/basics/timer/">
     <meta property="og:title" content="Timer">
+    <meta property="og:description" content="The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://toasterberry.github.io/ndguides/basics/timer/">
     <meta property="twitter:title" content="Timer">
+    <meta property="twitter:description" content="The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.6.0.794400189547" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.795011467290" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.794400189547" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.795011467290" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.794400189547" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.795011467290" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -181,6 +184,82 @@
         <span>Timer</span>
     </h1>
 </doc-anchor-target>
+<p>The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout. Although you can use any kind of timer, <a href="https://livesplit.org/">LiveSplit</a> is the go-to. It&#x27;s very customizable and has support for autosplitters, but only for Windows?. It may seem intimidating to setup, but it&#x27;s very straight forward.</p>
+<doc-anchor-target id="basic-setup">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-setup">#</doc-anchor-trigger>
+        <span>Basic Setup</span>
+    </h2>
+</doc-anchor-target>
+<p>Head to <a href="https://livesplit.org/">https://livesplit.org/</a> and download LiveSplit. Navigate to the newly downloaded file, right click it, click &quot;Extract all&quot;, then &quot;Extract&quot;. You&#x27;ll now have a folder that contains the program. You can put this anywhere you like. In the folder, double click &quot;LiveSplit&quot; to open it. A small black window will pop up. This is LiveSplit at its core, but it&#x27;s easy to make it look much better.</p>
+<p>image</p>
+<p>First, let&#x27;s go over basic settings. Right click the black window, and click &quot;Settings&quot;. You can adjust the hotkeys for everything as you like. Try to find some keys you won&#x27;t naturally use, and won&#x27;t accidentally press. Common choices are numpad or Insert/Home/End keys.</p>
+<p>Afterwards, enable &quot;Global Hotkeys&quot;, and click OK.</p>
+<doc-anchor-target id="splits">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#splits">#</doc-anchor-trigger>
+        <span>Splits</span>
+    </h2>
+</doc-anchor-target>
+<p>Your timer is still really short and doesn&#x27;t do much besides starting and stopping. Let&#x27;s fix that. Right click the timer, then click &quot;Edit Splits&quot;. Here you can set the game and category you&#x27;re running. Immediately you&#x27;ll see LiveSplit take shape.</p>
+<p>image</p>
+<p>Now let&#x27;s fill up that empty space. A &quot;split&quot; is a point you can add in your timer to represent some kind of event from the game, often things like reaching an area, or completing a puzzle. Similar to a &quot;lap&quot; in a race. This breaks your run up into smaller segments so you can track your performance throughout different portions of the game. They can also be used to see a best theoretical time using your best times for each split. To add splits, click the &quot;Insert Above/Below&quot; button on the left. You can name them anything you want, they don&#x27;t have to match anything. You can add as many or as few as you like. Your last split in this list will be treated as your end split.</p>
+<p>image</p>
+<doc-anchor-target id="autosplitters">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autosplitters">#</doc-anchor-trigger>
+        <span>Autosplitters</span>
+    </h2>
+</doc-anchor-target>
+<p>Autosplitters automate your timer for you. This allows you to focus on the game instead of timing keyboard presses to control your timer. While still in the &quot;Edit Splits&quot; menu, if an autosplitter is available for the game set, you&#x27;ll see an &quot;Activate&quot; button. After clicking it, click the &quot;Settings&quot; button next to it. These control which parts of the game will automatically split for you. Start/stop is already automatic at this point.</p>
+<p>It&#x27;s important to note that the automatic splits simply press your split hotkey when it sees you&#x27;re at a certain part of the game. This means you have to ensure the amount of splits you have match the split checkboxes you ticked in the settings. If you wanted to split at 3 unique points in game, you&#x27;d enable 3 of the corresponding checkboxes, add 3 uniquely named splits, plus your ending split.</p>
+<p>image</p>
+<p>Autosplitters should work seamlessly once they&#x27;re activated. They can detect when the game is open/closed, and should start once you select a difficulty. If you&#x27;re having trouble with an autosplitter, see &quot;Autosplitter Troubleshooting&quot; at the bottom of this page.</p>
+<doc-anchor-target id="layout">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layout">#</doc-anchor-trigger>
+        <span>Layout</span>
+    </h2>
+</doc-anchor-target>
+<p>The layout controls how your timer looks. With all other menus closed, right click the timer, and click &quot;Edit Layout&quot;. Here you&#x27;ll see elements of your layout. The game title, your splits, the timer, and &quot;Previous Segment&quot; by default. You can click the + icon on the left to add new elements. A popular one is &quot;Sum of Best&quot; under &quot;Information&quot;, which shows your theoretical best possible time based on your historical best split times. You can configure each of these by double clicking them, or remove one by clicking it, and then clicking the - on the left.</p>
+<p>To change the look of the general layout, click &quot;Layout Settings&quot; at the bottom left. You can change the colors, font, add a background, and more. You can spend some time experimenting with the layout to make it your own, or just keep it simple.</p>
+<p>You can also adjust the size of the window by hovering over the edges and corners of the main timer window. Having it larger will make it look clearer in your recordings.</p>
+<p>Just like that, you have a fully setup and fancy looking timer! Save your layout and splits by right clicking the main timer window. You can use the same layout across multiple games, or make new ones, but splits are game and category specific. If you need to change game/category, right click the timer, click &quot;Close Splits&quot;, and edit the splits from scratch like before.</p>
+<doc-anchor-target id="extra-tips">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extra-tips">#</doc-anchor-trigger>
+        <span>Extra Tips</span>
+    </h2>
+</doc-anchor-target>
+<p>Here&#x27;s some unorganized information you may find useful:</p>
+<ul>
+<li>The number at the top right is your attempts.</li>
+<li></li>
+</ul>
+<doc-anchor-target id="autosplitter-faq">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autosplitter-faq">#</doc-anchor-trigger>
+        <span>Autosplitter FAQ</span>
+    </h2>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="it-isn-t-working" collapsed>
+       <template #title>It isn&#x27;t working</template>
+<p>Typically this is because the autosplitter lacks compatibility with your version. Many autosplitters were made only with access to the disc versions, and steam versions usually won&#x27;t immediately work them. You can get support for other versions added by joining the Nancy Drew Speedrunning Discord server and asking about it in the game&#x27;s appropriate channel.</p>
+   </doc-panel>
+   <doc-panel id="it-only-partially-works" collapsed>
+       <template #title>It only partially works</template>
+<p>Partial functionality usually happens when you accidentally have two autosplitters at once, such as one from the splits menu, and one from a local file added with the layout menu. Disable/remove the extra one. If you&#x27;re still experiencing inconsistency, ask about it in the Nancy Drew Speedrunning Discord server.</p>
+   </doc-panel>
+   <doc-panel id="how-do-i-use-an-asl-file" collapsed>
+       <template #title>How do I use an .asl file?</template>
+<p>Right click your timer, click &quot;Edit Layout&quot;, click the + at the top left, hover over &quot;control&quot;, click &quot;Scriptable Auto Splitter&quot; to add it to the list. Double click it in the list, click &quot;Browse&quot; and find the .asl you downloaded. Configuration now is the same as before.</p>
+   </doc-panel>
+   <doc-panel id="what-is-auto-reset" collapsed>
+       <template #title>What is auto reset?</template>
+<p>Auto reset will automatically reset your timer for you at the difficulty select screen under certain circumstances. This is useful if you&#x27;re resetting a lot at the start of a run. It won&#x27;t activate if you already completed a run and haven&#x27;t manually reset your timer, or if you got a new best split.</p>
+   </doc-panel>
+</doc-panels>
 
                                 
                                 <!-- Required only on API pages -->
