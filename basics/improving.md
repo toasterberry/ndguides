@@ -31,8 +31,6 @@ Playing the games fast and clicking fast go hand in hand. There are many techniq
 - Some players tense up their hand in a certain way to click fast with just one finger, which is referred to as jitter clicking.
 - Players in other games have used techniques involving creating friction with their finger and mouse button to click at extremely high speeds, known as "drag clicking". No known Nancy Drew runners do this, but it could serve useful situationally.
 
-As long as you can click at even a moderate speed, click speed alone won't hinder you from getting first in really any of the Nancy Drew games at this time.
-
 ## Tips
 
 Here's some unorganized tips:
