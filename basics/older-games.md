@@ -17,7 +17,7 @@ If you own physical copies of any Nancy Drew games 1-12, you'll likely find they
 
 The first option is the simplest and provides a great way to store and play your games natively on Windows. The second can be more convenient due to not having to eject and mount different ISOs, instead allowing the game to immediately start.
 
-With the original Secrets can Kill, a No-CD patch is all but required for speedrunning the game due to it requiring constant swapping between 2 discs (or ISOs) otherwise. Here's a video on how to install it:
+With the original Secrets Can Kill, a No-CD patch is all but required for speedrunning the game due to it requiring constant swapping between 2 discs (or ISOs) otherwise. Here's a video on how to install it:
 
 [!embed](https://www.youtube.com/watch?v=3xY7XeEWLpo)
 

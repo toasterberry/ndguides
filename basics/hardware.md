@@ -27,7 +27,7 @@ Your monitor primarily affects your reaction time. Most modern displays have a s
 
 Refresh rate is a separate matter but still affects the overall latency of your monitor. 60Hz is the most common refresh rate in general, and in the best of circumstances is still very usable. Higher refresh rates can reduce input latency because you have less time lost between changes on screen due to it changing more often. Not only do higher refresh rates reduce latency, they also just feels better to play. Everything looks and feels smoother, and that alone improves the overall experience.
 
-While the monitor is important, you may run into diminishing returns pretty fast. A 120Hz or 144Hz "gaming" monitor is a great balance between price and performance. If money is no object, very high refresh rate OLED monitors provide the lowest input latency possibly with modern displays. Though more niche, higher end retro CRT monitors can provide high refresh rates, 0 latency, and make the older games look amazing compared to modern displays. They're mainly worth considering if you already have one, or are already interested in them.
+While the monitor is important, you may run into diminishing returns pretty fast. A 120Hz or 144Hz "gaming" monitor is a great balance between price and performance. If money is no object, very high refresh rate OLED monitors provide the lowest input latency possible with modern displays. Though more niche, higher end retro CRT monitors can provide high refresh rates, 0 latency, and make the older games look amazing compared to modern displays. They're mainly worth considering if you already have one, or are already interested in them.
 
 ## Storage
 
