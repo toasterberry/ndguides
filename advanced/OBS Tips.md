@@ -7,7 +7,7 @@ icon: play
 
 # OBS Tips
 
-Here's some tips for making your OBS recordings/stream look good with the games.
+Here's some tips for making your OBS recordings/streams look good with ND games.
 
 ## Displaying the Game
 
@@ -15,7 +15,7 @@ When using a display capture to capture the older games in full screen, you'll n
 
 Left click your display capture, hold CTRL and press E. To get rid of the white borders, enter "2" in the left, right, top, and bottom crop values.
 
-To get it to scale properly, change "Bounding Box Top" to "Scale to inner bounds". You can change "Alignment in Bounding Box" to Center Left or Center Right depending on your preference, and where you'd like any other elements. This part applies to any of the games.
+To get it to scale properly, change "Bounding Box Top" to "Scale to inner bounds". You can change "Alignment in Bounding Box" to Center Left or Center Right depending on your preference, and where you'd like any other elements. This applies to any of the games.
 
 If you'd like to make the image clearer, right click your Display Capture, hover over "Scale Filtering", and choose one. "Area" looks clean and sharp, but some may not like the harsh pixels. "Bicubic" is sharper than default and smoother than Area, but can add gross artifacts.
 

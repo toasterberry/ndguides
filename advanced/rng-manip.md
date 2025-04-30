@@ -9,7 +9,7 @@ icon: lock
 
 Randomness can be your worst enemy in speedrunning. It can cause you to lose a run purely because of a factor that is out of your control. But what if you could control it?
 
-In Nancy Drew games 1-32?, randomness is based on your computer's clock. This means if your computer's clock were to hypothetically freeze, every random event would now have the same outcome. This means you could set your computer's clock to a certain time to manipulate the outcome of random events in your favor. However, an approach like that isn't very convenient, especially if you're doing a lot of shorter runs.
+In Nancy Drew games 1-32?, randomness is based on your computer's clock. This means if your computer's clock were to hypothetically freeze, every random event would now have a predictable outcome. This means you could set your computer's clock to a certain time to manipulate the outcome of random events in your favor. However, an approach like that isn't very convenient, especially if you're doing a lot of shorter runs.
 
 # RunAsDate
 
@@ -33,4 +33,6 @@ Open Steam, launch the game as you normally would, and you should see the RunAsD
 
 ## Configuration
 
-Next, untick "Move the time forward according to the real time", then tick "Immediate Mode".
+Next, untick "Move the time forward according to the real time", then tick "Immediate Mode". The time and date you set is your "seed". Using RAD at all makes random events predictable, but changing the time and date affects what outcome they have. Routes may have seeds included, but you can also find your own or ask community members for some.
+
+If you're having trouble with a seed, try setting it forward or back an hour at a time a few hours each way. Time zones and time changes seem to affect how RAD works.
