@@ -3,6 +3,7 @@ label: RNG Manipulation
 layout: page
 order: -10
 icon: lock
+tags: [advanced]
 ---
 
 # RNG Manipulation
@@ -13,7 +14,7 @@ In Nancy Drew games 1-32?, randomness is based on your computer's clock. This me
 
 # RunAsDate
 
-This is where RunAsDate comes into play. It allows us to run a program with a specific time and date. With this, we can easily set what time we want and quickly reopen the game if needed. 
+This is where RunAsDate comes into play. It allows us to run a program with a specific time and date. With this, we can easily set what time we want and quickly reopen the game running at that set time if needed. 
 
 Head to [https://www.nirsoft.net/utils/run_as_date.html](this site), scroll down just above the languages, and click "Download RunAsDate" (Not x64). Go to your downloads folder, right click the newly downloaded file, click "Extract All", and "Extract". RunAsDate will now be in its own folder, and you can put it anywhere you like.
 

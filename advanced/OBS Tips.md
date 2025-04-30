@@ -3,6 +3,7 @@ label: OBS Tips
 layout: page
 order: -20
 icon: play
+tags: [advanced]
 ---
 
 # OBS Tips

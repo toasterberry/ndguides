@@ -35,7 +35,7 @@ VOD | Video On-Demand, refers to past broadcasts hosted on Twitch, often used fo
 
 Number | Abbreviation | Full Title {.compact}
 ---: | --- | ---
-1 | SCK | Secrets Can Kill (TEST)
+1 | SCK | Secrets Can Kill
 2 | STFD | Stay Tuned for Danger
 3 | MHM | Message in a Haunted Mansion
 4 | TRT | Treasure in the Royal Tower
