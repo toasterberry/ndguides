@@ -31,8 +31,41 @@ Unlisted | A privacy setting available for YouTube videos where they can't appea
 VOD | Video On-Demand, refers to past broadcasts hosted on Twitch, often used for any video hosted on Twitch
 
 
-## Game Acronyms
+## Game Abbreviations
 
-Number | Game | Full Title {.compact}
+Number | Abbreviation | Full Title {.compact}
 ---: | --- | ---
 1 | SCK | Secrets Can Kill (TEST)
+2 | STFD | Stay Tuned for Danger
+3 | MHM | Message in a Haunted Mansion
+4 | TRT | Treasure in the Royal Tower
+5 | FIN | The Final Scene
+6 | SSH | Secret of the Scarlet Hand
+7 | DOG | Ghost Dogs of Moon Lake
+8 | CAR | The Haunted Carousel
+9 | DDI | Danger on Deception Island
+10 | SHA | The Secret of Shadow Ranch
+11 | CUR | Curse of Blackmoor Manor
+12 | CLK | Secret of the Old Clock
+13 | TRN | Last Train to Blue Moon Canyon
+14 | DAN | Danger by Design
+15 | CRE | The Creature of Kapu Cave
+16 | ICE | The White Wolf of Icicle Creek
+17 | CRY | Legend of the Crystal Skull
+18 | VEN | The Phantom of Venice
+19 | HAU | The Haunting of Castle Malloy
+20 | RAN | Ransom of the Seven Ships
+21 | WAC | Warnings at Waverly Academy
+22 | TOT | Trail of the Twister
+23 | SAW | Shadow at the Water's Edge
+24 | CAP | The Captive Curse
+25 | ASH | Alibi in Ashes
+26 | TMB | Tomb of the Lost Queen
+27 | DED | The Deadly Device
+28 | GTH | Ghost of Thornton Hall
+29 | SPY | The Silent Spy
+30 | MED | The Shattered Medallion
+31 | LIE | Labyrinth of Lies
+32 | SEA | Sea of Darkness
+33 | MID | Midnight in Salem
+34 | KEY | Mystery of the Seven Keys
