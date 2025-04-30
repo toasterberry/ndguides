@@ -33,6 +33,6 @@ VOD | Video On-Demand, refers to past broadcasts hosted on Twitch, often used fo
 
 ## Game Acronyms
 
-# | Game | Full Title
+Number | Game | Full Title
 ---: | --- | ---
 1 | SCK | Secrets Can Kill (TEST)
