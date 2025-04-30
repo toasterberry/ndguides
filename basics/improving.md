@@ -29,7 +29,7 @@ Playing the games fast and clicking fast go hand in hand. There are many techniq
 - Many players will use two fingers from their free hand to alternate clicking their left mouse button while their other hand still controls the mouse. 
 - Some players will instead use their index and middle finger from the same hand they're moving the mouse with to alternate clicking the left mouse button faster. This is called butterfly clicking. 
 - Some players tense up their hand in a certain way to click fast with just one finger, which is referred to as jitter clicking.
-- Players in other games have used techniques involving creating friction with their finger and mouse button to click at extremely high speeds, known as "drag clicking". No known Nancy Drew runners do this, but it could serve useful situationally.
+- Players in other games have used techniques involving creating friction with their finger and mouse button to click at extremely high speeds, known as drag clicking. No known Nancy Drew runners do this, but it could be useful situationally.
 
 ## Tips
 

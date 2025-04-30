@@ -15,7 +15,7 @@ If you own physical copies of any Nancy Drew games 1-12, you'll likely find they
 1. Backup the disc to an ISO with a tool like [InfraRecorder](https://sourceforge.net/projects/infrarecorder/)
 2. Apply a No-CD patch
 
-The first option is the simplest and provides a great way to store and play your games natively on Windows. The second can be more convenient due to not having to eject and mount different ISOs, instead allowing the game to immediately start.
+The first option is the simplest and provides a great way to store and play your games natively on Windows. The second can be more convenient due to not having to eject and mount different ISOs, instead allowing the game to immediately start. No-CD patches can easily be found on Google.
 
 With the original Secrets Can Kill, a No-CD patch is all but required for speedrunning the game due to it requiring constant swapping between 2 discs (or ISOs) otherwise. Here's a video on how to install it:
 
@@ -25,11 +25,11 @@ With the original Secrets Can Kill, a No-CD patch is all but required for speedr
 
 Normally, speedrunning any of the Nancy Drew games in windowed mode isn't optimal due to added latency and the potential to click outside the window, which freezes the game until clicked back in. However, if you need to run them in windowed mode anyways, you'll notice that games before #16 don't have that option in the first place.
 
-Using a program called [DxWnd](https://sourceforge.net/projects/dxwnd/), you can run them windowed anyways. It causes a lot of graphical bugs in game, but it works.
+We can get around this using a program called [DxWnd](https://sourceforge.net/projects/dxwnd/). It causes a lot of graphical bugs in game, but it works.
 
 To use it, download the program [from here](https://sourceforge.net/projects/dxwnd/), navigate to the file afterwards, right click it, click "Extract all", then "Extract". You'll now have a folder that contains the program. You can put it anywhere you like. Enter the folder, and double click the "dxwnd" file with the 3 circles icon to start it.
 
-Navigate to your Nancy Drew game's installation folder. To do this easily, right click the game's icon on your desktop, and click "Open file location". Drag the game's executable file into the DxWnd window. Press "OK" on the window that pops up. Double click your game in the main DxWnd window to start it windowed
+Navigate to your Nancy Drew game's installation folder. To do this easily, right click the game's icon on your desktop, and click "Open file location". Drag the game's application file into the DxWnd window. Press "OK" on the window that pops up. Double click your game in the main DxWnd window to start it windowed
 
 !!!
 The exact name of your game's executable can vary, but it's either "Game" or a simplified version of the game's title. It will have an icon like on your desktop
