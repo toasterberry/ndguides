@@ -18,11 +18,11 @@ Any% | A speedrunning category with the least amount of restrictions possible fo
 Category | A division of a speedrunning leaderboard for a game based on certain criteria or rules
 Death% | A speedrunning category with the goal of dying in-game
 LiveSplit | The go-to timer software for speedrunning
-MND | The "More Nancy Drew!" screen found in the games, usually referring to the various glitches invlolving the screen
+MND | The "More Nancy Drew!" screen found in the games, usually referring to the various glitches invlolving it
 ND | Nancy Drew
 No-Glitch/Glitchless | A speedrunning category where glitches are disallowed
-Premove | The act of performing an action with anticipation/timing and not reaction
-RAD | Run As Date, software used for RNG manipulation
+Premove | Performing an action with anticipation/timing and not reaction
+RAD | RunAsDate, software used for [RNG manipulation](/advanced/rng-manip.md)
 Relay | A speedrun race involving teams and multiple games, where as one player finishes a game, another team member begins the next
 RNG | Random Number Generator, generally used to refer to randomness in games
 Run | A particular instance of a performed speedrun, or the act of performing a speedrun
@@ -33,7 +33,7 @@ VOD | Video On-Demand, refers to past broadcasts hosted on Twitch, often used fo
 
 ## Game Abbreviations
 
-Number | Abbreviation | Full Title {.compact}
+Number | Abbreviation | Game Title {.compact}
 ---: | --- | ---
 1 | SCK | Secrets Can Kill
 2 | STFD | Stay Tuned for Danger

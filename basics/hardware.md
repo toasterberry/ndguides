@@ -17,9 +17,9 @@ Glorious is a good high end brand with features good for click speed. Logitech m
 
 Settings are also important. Navigate to your mouse settings in Windows, then click "Additional Mouse Options". Go to the "Pointer Options" tab. You should have "Enhance pointer precision" unticked. This will allow for consistency when moving your mouse, and is essential for building muscle memory. Your pointer speed should be set exactly in the middle, otherwise your cursor will occasionally skip pixels. 
 
-image
+![](/images/hardware/mouseproperties.avif)
 
-You can instead adjust your mouse speed by changing your mouse's DPI. You should go for a relatively low sensitivity that still allows your plenty of physical room to move your mouse. These changes may feel jarring at first, but after quickly adjusting to them, they will feel much better.
+You can instead adjust your mouse speed by changing your mouse's DPI. You should go for a relatively low sensitivity that still allows you plenty of physical room to move your mouse. These changes may feel jarring at first, but after quickly adjusting to them, they will feel much better.
 
 ## Monitor
 
@@ -37,6 +37,6 @@ If you only have access to a HDD, navigating throughout the game before starting
 
 ## Computer
 
-As long as you're using anything relatively modern, the rest of your computer's hardware shouldn't matter too much for games before Midnight in Salem. Even a budget "gaming" PC from 6+ years ago should be more than capable of playing this series while recording/streaming with good performance. You might find small increases in time with higher end hardware, but it's likely negligible in many cases.
+As long as you're using anything relatively modern, the rest of your computer's hardware shouldn't matter too much for games before Midnight in Salem. Even a budget "gaming" PC from 6+ years ago should be more than capable of playing this series while recording/streaming with good performance. Many laptops are very usable as well. You might find small increases in time with higher end hardware, but it's likely negligible in many cases.
 
 With the most recent games in the 3D engine, your CPU and GPU can affect performance substantially. Thankfully, nobody runs these.
