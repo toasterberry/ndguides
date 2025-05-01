@@ -10,10 +10,11 @@ links:
     icon: home
 
 footer:
-  copyright: "Nancy Drew Speedrunning Discord"
-    - link: https://discordapp.com/invite/GWD8j8M
+  copyright: "NA"
   links:
     - text: License
       link: license.md
+    - text: Nancy Drew Speedrunning Discord
+      link: https://discordapp.com/invite/GWD8j8M
 
 favicon: static/favicon.png
