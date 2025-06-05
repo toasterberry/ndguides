@@ -247,6 +247,11 @@ If you play the older games in full screen, you may notice your cursor moves way
 });
 </script>
 
+<script>
+alert("If you see this, JavaScript works!");
+console.log("JavaScript test successful");
+</script>
+
 ## Monitor
 
 Your monitor primarily affects your reaction time. Most modern displays have a small delay between receiving content and actually displaying it. It's not uncommon to find a display with 50-100ms+ of latency. 100ms might not seem like much, but with just 10 instances of you performing any action based on reaction time, you've lost a full second solely due to your display. TVs are most prone to heavy latency, and should generally be avoided. Most computer monitors are better than TVs, but can vary.
