@@ -175,21 +175,16 @@ If you play the older games in full screen, you may notice your cursor moves way
 </style>
 
 <div class="dpi-calculator-container">
-    <h3>Mouse DPI Conversion Calculator (Physical Screen Consistency)</h3>
-    <p class="description">
-        This calculator helps you find an in-game DPI so your mouse movement feels the same in terms of physical distance covered on your screen,
-        counteracting the sensitivity change from low-resolution games being scaled up. Assumes the game is fullscreen and scaled to fit your monitor's height (with black bars on sides).
-    </p>
 
 <div class="dpi-calculator-input-group">
-    <label for="ndCurrentDpiV2">Your Current Desktop DPI:</label>
+    <label for="ndCurrentDpiV2">Your Current DPI:</label>
     <input type="number" id="ndCurrentDpiV2" name="ndCurrentDpiV2" placeholder="e.g., 800" min="50" step="50">
 </div>
 
 <div class="dpi-calculator-input-group">
-    <label for="ndMonitorVertRes">Your Desktop Monitor Height (in pixels):</label>
+    <label for="ndMonitorVertRes">Your Desktop Resolution Height (in pixels):</label>
     <input type="number" id="ndMonitorVertRes" name="ndMonitorVertRes" placeholder="e.g., 1080 for 1920x1080">
-    <small>Common values: 720 (HD), 1080 (Full HD), 1440 (QHD/2K), 2160 (UHD/4K)</small>
+    <small>Common values: 720 (720p), 1080 (1080p), 1440 (1440p/2K), 2160 (UHD/4K)</small>
 </div>
 
 <div class="dpi-calculator-input-group">
