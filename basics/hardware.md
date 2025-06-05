@@ -76,12 +76,12 @@ If you play the older games in full screen, you may notice your cursor moves way
         transition: border-color 0.2s ease-in-out;
     }
 
-    /* Ensure minimum border visibility when Retype variables result in invisible borders */
-    .dpi-calculator-container input[type="number"] {
+    /* More specific selectors to avoid conflicts with Retype's navigation */
+    .dpi-calculator-container .dpi-calculator-input-group input[type="number"] {
         border-color: var(--color-input-border, var(--color-border, rgba(0,0,0,0.2)));
     }
     
-    .dpi-calculator-container select {
+    .dpi-calculator-container .dpi-calculator-input-group select {
         border-color: var(--color-input-border, var(--color-border, rgba(0,0,0,0.2)));
     }
     
