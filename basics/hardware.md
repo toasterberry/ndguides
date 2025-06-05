@@ -25,10 +25,9 @@ If you play the older games in full screen, you may notice your cursor moves way
 
 <style>
     .dpi-calculator-container {
-        /* Retype variables with more robust fallbacks */
-        background-color: var(--color-background-offset, #f8f9fa); /* Light gray fallback for light mode */
-        border: 1px solid var(--color-border, #dee2e6); /* Gray border fallback */
-        color: var(--color-text, #212529); /* Default text color fallback (dark) */
+        background-color: var(--color-background-offset, #f8f9fa);
+        border: 1px solid var(--color-border, #dee2e6);
+        color: var(--color-text, #212529);
         padding: 20px;
         border-radius: 8px;
         margin-top: 25px;
@@ -36,17 +35,40 @@ If you play the older games in full screen, you may notice your cursor moves way
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-container {
+            background-color: var(--color-background-offset, #1e1e1e);
+            border-color: var(--color-border, #404040);
+            color: var(--color-text, #e0e0e0);
+        }
+    }
+
     .dpi-calculator-container h3 {
         margin-top: 0;
         margin-bottom: 15px;
-        color: var(--color-heading, #343a40); /* Darker gray for heading fallback */
+        color: var(--color-heading, #343a40);
         font-size: 1.4em;
+    }
+
+    /* Dark mode heading */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-container h3 {
+            color: var(--color-heading, #ffffff);
+        }
     }
     
     .dpi-calculator-container p.description {
         margin-bottom: 20px;
         font-size: 0.95em;
-        color: var(--color-text-light, #495057); /* Slightly lighter text for description */
+        color: var(--color-text-light, #495057);
+    }
+
+    /* Dark mode description */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-container p.description {
+            color: var(--color-text-light, #b0b0b0);
+        }
     }
 
     .dpi-calculator-input-group {
@@ -57,53 +79,83 @@ If you play the older games in full screen, you may notice your cursor moves way
         display: block;
         margin-bottom: 6px;
         font-weight: 600;
-        color: var(--color-text, #212529); /* Default text color for labels */
+        color: var(--color-text, #212529);
         font-size: 0.95em;
+    }
+
+    /* Dark mode labels */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-input-group label {
+            color: var(--color-text, #e0e0e0);
+        }
     }
 
     .dpi-calculator-container input[type="number"],
     .dpi-calculator-container select {
         width: 100%;
-        padding: 10px 12px;
-        border: 1px solid var(--color-input-border, #ced4da); /* Input border fallback */
+        padding: 12px;
+        border: 1px solid var(--color-input-border, #ced4da);
         border-radius: 5px;
         box-sizing: border-box;
         font-size: 1em;
-        background-color: var(--color-input-background, #ffffff); /* White background for inputs */
-        color: var(--color-input-text, #495057); /* Text color for inputs */
-        min-height: 40px; /* Ensure select is tall enough */
-    }
-    
-    /* Specific styling for select to try and improve readability */
-    .dpi-calculator-container select {
-        appearance: none; /* Remove default OS styling to have more control */
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007 категории%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-        background-repeat: no-repeat;
-        background-position: right 12px center;
-        background-size: 10px;
-        padding-right: 30px; /* Make space for the custom arrow */
+        background-color: var(--color-input-background, #ffffff);
+        color: var(--color-input-text, #495057);
+        min-height: 44px;
+        line-height: 1.4;
     }
 
+    /* Dark mode inputs */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-container input[type="number"],
+        .dpi-calculator-container select {
+            background-color: var(--color-input-background, #2d2d2d);
+            border-color: var(--color-input-border, #555555);
+            color: var(--color-input-text, #e0e0e0);
+        }
+    }
+    
+    .dpi-calculator-container select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 12px;
+        padding-right: 36px;
+    }
+
+    /* Dark mode select arrow */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-container select {
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23cccccc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        }
+    }
 
     .dpi-calculator-container input[type="number"]:focus,
     .dpi-calculator-container select:focus {
-        border-color: var(--color-primary, #007bff); /* Primary color for focus border */
+        border-color: var(--color-primary, #007bff);
         outline: none;
-        box-shadow: 0 0 0 0.15rem var(--color-primary-shadow, rgba(0,123,255,.25)); /* Focus shadow */
+        box-shadow: 0 0 0 0.15rem var(--color-primary-shadow, rgba(0,123,255,.25));
     }
 
     .dpi-calculator-input-group small {
         display: block;
         margin-top: 6px;
-        color: var(--color-text-lighter, #6c757d); /* Lighter text for small hints */
+        color: var(--color-text-lighter, #6c757d);
         font-size: 0.85em;
     }
 
+    /* Dark mode small text */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-input-group small {
+            color: var(--color-text-lighter, #999999);
+        }
+    }
+
     .dpi-calculator-container button {
-        background-color: var(--color-primary, #007bff); /* Primary button color */
-        color: var(--color-primary-text, white); /* Text on primary button */
+        background-color: var(--color-primary, #007bff);
+        color: var(--color-primary-text, white);
         padding: 10px 18px;
         border: none;
         border-radius: 5px;
@@ -116,30 +168,53 @@ If you play the older games in full screen, you may notice your cursor moves way
     }
 
     .dpi-calculator-container button:hover {
-        background-color: var(--color-primary-hover, #0056b3); /* Darker primary on hover */
+        background-color: var(--color-primary-hover, #0056b3);
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .dpi-calculator-result {
         margin-top: 20px;
         padding: 15px;
-        background-color: var(--color-success-background, #d1e7dd); /* Success background */
-        border: 1px solid var(--color-success-border, #badbcc);   /* Success border */
-        border-left: 5px solid var(--color-success, #198754);      /* Success left accent */
-        color: var(--color-success-text, #0a3622);                /* Success text */
+        background-color: var(--color-success-background, #d1e7dd);
+        border: 1px solid var(--color-success-border, #badbcc);
+        border-left: 5px solid var(--color-success, #198754);
+        color: var(--color-success-text, #0a3622);
         border-radius: 5px;
+    }
+
+    /* Dark mode success */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-result {
+            background-color: var(--color-success-background, #0f2419);
+            border-color: var(--color-success-border, #1e4d2b);
+            color: var(--color-success-text, #75dd88);
+        }
     }
 
     .dpi-calculator-result h4 {
         margin-top: 0;
         margin-bottom: 8px;
         font-size: 1.1em;
-        color: var(--color-success-heading, #0a3622); /* Darker success text for heading */
+        color: var(--color-success-heading, #0a3622);
+    }
+
+    /* Dark mode success heading */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-result h4 {
+            color: var(--color-success-heading, #75dd88);
+        }
     }
 
     .dpi-calculator-result strong {
         font-size: 1.8em;
-        color: var(--color-success, #198754); /* Make the number stand out with success color */
+        color: var(--color-success, #198754);
+    }
+
+    /* Dark mode success strong */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-result strong {
+            color: var(--color-success, #28a745);
+        }
     }
     
     .dpi-calculator-result small {
@@ -151,12 +226,21 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-error {
         margin-top: 15px;
         padding: 12px;
-        background-color: var(--color-danger-background, #f8d7da); /* Danger background */
-        border: 1px solid var(--color-danger-border, #f5c2c7);    /* Danger border */
-        border-left: 5px solid var(--color-danger, #dc3545);       /* Danger left accent */
-        color: var(--color-danger-text, #58151c);                 /* Danger text */
+        background-color: var(--color-danger-background, #f8d7da);
+        border: 1px solid var(--color-danger-border, #f5c2c7);
+        border-left: 5px solid var(--color-danger, #dc3545);
+        color: var(--color-danger-text, #58151c);
         border-radius: 5px;
         font-size: 0.95em;
+    }
+
+    /* Dark mode error */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-error {
+            background-color: var(--color-danger-background, #2d1b1b);
+            border-color: var(--color-danger-border, #5c2e2e);
+            color: var(--color-danger-text, #ff6b6b);
+        }
     }
 </style>
 
@@ -197,29 +281,13 @@ If you play the older games in full screen, you may notice your cursor moves way
 </div>
 
 <script>
-// Working DPI Calculator - Replace your current script with this
-
-console.log("DPI Calculator: Script loading...");
-
 function calculateDPI() {
-    console.log("calculateDPI function called");
-    
-    // Get all the elements
     const currentDpiEl = document.getElementById('ndCurrentDpiV2');
     const monitorVertResEl = document.getElementById('ndMonitorVertRes');
     const gameSeriesEl = document.getElementById('ndGameSeriesV2');
     const resultDiv = document.getElementById('ndDpiResultV2');
     const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
     const errorDiv = document.getElementById('ndDpiErrorV2');
-    
-    console.log("Elements found:", {
-        currentDpi: !!currentDpiEl,
-        monitorHeight: !!monitorVertResEl,
-        gameSelect: !!gameSeriesEl,
-        resultDiv: !!resultDiv,
-        calculatedValue: !!calculatedDpiValueEl,
-        errorDiv: !!errorDiv
-    });
     
     // Clear previous results
     if (resultDiv) resultDiv.style.display = 'none';
@@ -228,31 +296,12 @@ function calculateDPI() {
         errorDiv.textContent = '';
     }
     
-    // Get input values
-    const currentDpiText = currentDpiEl ? currentDpiEl.value : '';
-    const monitorHeightText = monitorVertResEl ? monitorVertResEl.value : '';
-    const gameRenderHeightText = gameSeriesEl ? gameSeriesEl.value : '';
+    // Get and parse input values
+    const currentDpi = parseFloat(currentDpiEl ? currentDpiEl.value : '');
+    const monitorHeight = parseFloat(monitorVertResEl ? monitorVertResEl.value : '');
+    const gameRenderHeight = parseFloat(gameSeriesEl ? gameSeriesEl.value : '');
     
-    console.log('Input values:', {
-        currentDpi: currentDpiText,
-        monitorHeight: monitorHeightText,
-        gameHeight: gameRenderHeightText
-    });
-    
-    // Parse values
-    const currentDpi = parseFloat(currentDpiText);
-    const monitorHeight = parseFloat(monitorHeightText);
-    const gameRenderHeight = parseFloat(gameRenderHeightText);
-    
-    console.log('Parsed values:', {
-        currentDpi: currentDpi,
-        monitorHeight: monitorHeight,
-        gameHeight: gameRenderHeight
-    });
-    
-    // Validation function
     function showError(message) {
-        console.log('Showing error:', message);
         if (errorDiv) {
             errorDiv.textContent = message;
             errorDiv.style.display = 'block';
@@ -279,12 +328,6 @@ function calculateDPI() {
     const scalingFactor = monitorHeight / gameRenderHeight;
     const newDpi = currentDpi / scalingFactor;
     
-    console.log('Calculation:', {
-        scalingFactor: scalingFactor,
-        newDpi: newDpi,
-        roundedDpi: Math.round(newDpi)
-    });
-    
     // Validate result
     if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
         showError('Could not calculate DPI. Please check your inputs.');
@@ -295,38 +338,18 @@ function calculateDPI() {
     if (calculatedDpiValueEl && resultDiv) {
         calculatedDpiValueEl.textContent = Math.round(newDpi);
         resultDiv.style.display = 'block';
-        console.log('Result displayed successfully:', Math.round(newDpi));
-    } else {
-        console.error('Could not display result - elements missing');
     }
 }
 
-// Set up event listeners when DOM is ready
 function setupCalculator() {
-    console.log("Setting up calculator...");
-    
     const calculateBtn = document.getElementById('ndCalculateDpiBtnV2');
     
-    if (!calculateBtn) {
-        console.error('Calculate button not found!');
-        return;
-    }
+    if (!calculateBtn) return;
     
-    console.log("Calculate button found, adding event listener");
-    
-    // Add click event listener
     calculateBtn.addEventListener('click', function(e) {
-        console.log("Button clicked via addEventListener");
         e.preventDefault();
         calculateDPI();
     });
-    
-    // Also set onclick as backup
-    calculateBtn.onclick = function(e) {
-        console.log("Button clicked via onclick");
-        e.preventDefault();
-        calculateDPI();
-    };
     
     // Clear results when inputs change
     const inputs = [
@@ -345,22 +368,15 @@ function setupCalculator() {
             });
         }
     });
-    
-    console.log("Calculator setup complete");
 }
 
-// Multiple ways to ensure setup runs
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', setupCalculator);
 } else {
     setupCalculator();
 }
 
-// Backup setup on window load
 window.addEventListener('load', setupCalculator);
-
-console.log("DPI Calculator: Script loaded");
-
 </script>
 
 ## Monitor
