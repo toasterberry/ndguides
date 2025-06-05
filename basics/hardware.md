@@ -208,17 +208,31 @@ If you play the older games in full screen, you may notice your cursor moves way
         const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
         const errorDiv = document.getElementById('ndDpiErrorV2');
 
-        // Check if all elements were found
-        if (!currentDpiEl) console.error("DPI Calculator: Element with ID 'ndCurrentDpiV2' not found!");
-        if (!monitorVertResEl) console.error("DPI Calculator: Element with ID 'ndMonitorVertRes' not found!");
-        if (!gameSeriesEl) console.error("DPI Calculator: Element with ID 'ndGameSeriesV2' not found!");
-        if (!calculateBtn) console.error("DPI Calculator: Element with ID 'ndCalculateDpiBtnV2' not found!");
-        if (!resultDiv) console.error("DPI Calculator: Element with ID 'ndDpiResultV2' not found!");
-        if (!calculatedDpiValueEl) console.error("DPI Calculator: Element with ID 'ndCalculatedDpiValueV2' not found!");
-        if (!errorDiv) console.error("DPI Calculator: Element with ID 'ndDpiErrorV2' not found!");
+        // Initial element checks
+        if (!currentDpiEl) console.error("DPI Calculator: Element 'ndCurrentDpiV2' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndCurrentDpiV2' found at load.");
+
+        if (!monitorVertResEl) console.error("DPI Calculator: Element 'ndMonitorVertRes' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndMonitorVertRes' found at load.");
+        
+        if (!gameSeriesEl) console.error("DPI Calculator: Element 'ndGameSeriesV2' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndGameSeriesV2' found at load.");
+
+        if (!calculateBtn) console.error("DPI Calculator: Element 'ndCalculateDpiBtnV2' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndCalculateDpiBtnV2' found at load.");
+        
+        if (!resultDiv) console.error("DPI Calculator: Element 'ndDpiResultV2' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndDpiResultV2' found at load.");
+
+        if (!calculatedDpiValueEl) console.error("DPI Calculator: Element 'ndCalculatedDpiValueV2' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndCalculatedDpiValueV2' found at load.");
+
+        if (!errorDiv) console.error("DPI Calculator: Element 'ndDpiErrorV2' NOT FOUND at load!");
+        else console.log("DPI Calculator: Element 'ndDpiErrorV2' found at load.");
+
 
         function clearOutput() {
-            console.log("DPI Calculator: clearOutput called.");
+            console.log("DPI Calculator: clearOutput function called.");
             if (resultDiv) resultDiv.style.display = 'none';
             if (errorDiv) {
                 errorDiv.style.display = 'none';
@@ -227,33 +241,53 @@ If you play the older games in full screen, you may notice your cursor moves way
         }
         
         function showError(message) {
-            console.log("DPI Calculator: showError called with message:", message);
-            clearOutput();
+            console.log("DPI Calculator: showError function called with message:", message);
+            clearOutput(); // Call clearOutput to hide previous results/errors
             if (errorDiv) {
                 errorDiv.textContent = message;
                 errorDiv.style.display = 'block';
             } else {
-                console.error("DPI Calculator: errorDiv not found, cannot show error message.");
+                console.error("DPI Calculator: errorDiv is null in showError. Cannot display message:", message);
             }
         }
 
         if (calculateBtn) {
             console.log("DPI Calculator: 'Calculate' button found. Attaching event listener.");
             calculateBtn.addEventListener('click', function() {
-                console.log("DPI Calculator: 'Calculate' button clicked.");
-                clearOutput();
+                console.log("DPI Calculator: 'Calculate' button CLICKED. Inside handler."); // MOVED THIS UP
 
-                // Ensure elements are still valid before accessing .value
-                if (!currentDpiEl || !monitorVertResEl || !gameSeriesEl) {
-                    showError("A required input element is missing. Please refresh the page.");
+                // Re-check elements inside click handler just before use
+                if (!currentDpiEl) {
+                    console.error("DPI Calculator: currentDpiEl is null INSIDE CLICK HANDLER.");
+                    showError("Internal error: DPI input element missing.");
                     return;
                 }
+                if (!monitorVertResEl) {
+                    console.error("DPI Calculator: monitorVertResEl is null INSIDE CLICK HANDLER.");
+                    showError("Internal error: Monitor resolution input element missing.");
+                    return;
+                }
+                if (!gameSeriesEl) {
+                    console.error("DPI Calculator: gameSeriesEl is null INSIDE CLICK HANDLER.");
+                    showError("Internal error: Game series select element missing.");
+                    return;
+                }
+                
+                console.log("DPI Calculator: All input elements re-verified inside click handler.");
+                
+                clearOutput(); // Call clearOutput at the beginning of the calculation logic
 
-                const currentDpi = parseFloat(currentDpiEl.value);
-                const monitorHeight = parseFloat(monitorVertResEl.value);
-                const gameRenderHeight = parseFloat(gameSeriesEl.value);
+                const currentDpiText = currentDpiEl.value;
+                const monitorHeightText = monitorVertResEl.value;
+                const gameRenderHeightText = gameSeriesEl.value;
 
-                console.log("DPI Calculator: Inputs - DPI:", currentDpi, "Monitor Height:", monitorHeight, "Game Height:", gameRenderHeight);
+                console.log("DPI Calculator: Raw input values - DPI Text:", `"${currentDpiText}"`, "Monitor Height Text:", `"${monitorHeightText}"`, "Game Height Text:", `"${gameRenderHeightText}"`);
+
+                const currentDpi = parseFloat(currentDpiText);
+                const monitorHeight = parseFloat(monitorHeightText);
+                const gameRenderHeight = parseFloat(gameRenderHeightText);
+
+                console.log("DPI Calculator: Parsed inputs - DPI:", currentDpi, "Monitor Height:", monitorHeight, "Game Height:", gameRenderHeight);
 
                 // Input validation
                 if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 50000) {
@@ -264,10 +298,11 @@ If you play the older games in full screen, you may notice your cursor moves way
                     showError(`Please enter a valid monitor vertical resolution (e.g., at least ${gameRenderHeight} for the selected game, up to 10000).`);
                     return;
                 }
-                if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) {
-                    showError('Invalid game selection.'); // Should not happen with select
+                if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) { // Should not happen with select
+                    showError('Invalid game selection.');
                     return;
                 }
+                console.log("DPI Calculator: Input validation passed.");
 
                 const scalingFactor = monitorHeight / gameRenderHeight;
                 console.log("DPI Calculator: Scaling Factor:", scalingFactor);
@@ -285,13 +320,21 @@ If you play the older games in full screen, you may notice your cursor moves way
                     return;
                 }
                 
-                if (calculatedDpiValueEl && resultDiv) {
-                    calculatedDpiValueEl.textContent = Math.round(newDpi);
-                    resultDiv.style.display = 'block';
-                    console.log("DPI Calculator: Result displayed.");
-                } else {
-                    console.error("DPI Calculator: Result display elements not found.");
+                // Check result display elements again before use
+                if (!calculatedDpiValueEl) {
+                     console.error("DPI Calculator: calculatedDpiValueEl is null INSIDE CLICK HANDLER before display.");
+                     showError("Internal error: Result display element (value) missing.");
+                     return;
                 }
+                if (!resultDiv) {
+                     console.error("DPI Calculator: resultDiv is null INSIDE CLICK HANDLER before display.");
+                     showError("Internal error: Result display element (container) missing.");
+                     return;
+                }
+
+                calculatedDpiValueEl.textContent = Math.round(newDpi);
+                resultDiv.style.display = 'block';
+                console.log("DPI Calculator: Result displayed successfully.");
             });
         } else {
             console.error("DPI Calculator: 'Calculate' button (ndCalculateDpiBtnV2) was not found. Event listener NOT attached.");
@@ -300,8 +343,17 @@ If you play the older games in full screen, you may notice your cursor moves way
         // Optional: Clear results if inputs change
         if (currentDpiEl && monitorVertResEl && gameSeriesEl) {
             [currentDpiEl, monitorVertResEl, gameSeriesEl].forEach(el => {
-                el.addEventListener('input', clearOutput);
+                if (el) { // Add a null check for each element before adding listener
+                    el.addEventListener('input', function() { // Wrap clearOutput in a function for the event listener
+                        console.log("DPI Calculator: Input changed, calling clearOutput.");
+                        clearOutput();
+                    });
+                } else {
+                    console.error("DPI Calculator: An input element for 'on input clear' was null.");
+                }
             });
+        } else {
+            console.log("DPI Calculator: One or more input elements for 'on input clear' were null at load. Skipping listener attachment for them.");
         }
     });
 </script>
