@@ -198,147 +198,53 @@ If you play the older games in full screen, you may notice your cursor moves way
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        console.log("DPI Calculator: V3 DOMContentLoaded event fired. Script starting.");
-
-        const calculatorContainer = document.querySelector('.dpi-calculator-container'); // Get the main container
+    const calculateBtn = document.getElementById('ndCalculateDpiBtnV2');
+    
+    if (!calculateBtn) {
+        console.error('Calculate button not found!');
+        return;
+    }
+    
+    calculateBtn.addEventListener('click', function(e) {
+        e.preventDefault();
         
-        // Log if container is found
-        if (!calculatorContainer) {
-            console.error("DPI Calculator V3: CRITICAL - '.dpi-calculator-container' NOT FOUND!");
-            return; // Stop if container is missing
-        } else {
-            console.log("DPI Calculator V3: '.dpi-calculator-container' found.");
-        }
-
-        // We will get other elements inside the event handler now for some tests.
-
-        console.log("DPI Calculator V3: Attaching delegated event listener to container.");
-        calculatorContainer.addEventListener('click', function(event) {
-            console.log("DPI Calculator V3: Click detected on calculatorContainer. Target:", event.target);
-            
-            // Check if the clicked element is the button OR is inside the button
-            if (event.target.id === 'ndCalculateDpiBtnV2' || event.target.closest('#ndCalculateDpiBtnV2')) {
-                alert("DPI Calculator V3: Calculate Button Clicked!"); // Very obvious test
-                console.log("DPI Calculator V3: 'Calculate' button CLICKED (verified by ID or closest).");
-
-                // Now try to get elements again, just in case they were not ready before,
-                // or to ensure we have fresh references if they were re-rendered.
-                const currentDpiEl = document.getElementById('ndCurrentDpiV2');
-                const monitorVertResEl = document.getElementById('ndMonitorVertRes');
-                const gameSeriesEl = document.getElementById('ndGameSeriesV2');
-                const resultDiv = document.getElementById('ndDpiResultV2');
-                const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
-                const errorDiv = document.getElementById('ndDpiErrorV2');
-
-                // --- Helper functions defined inside to ensure scope ---
-                function clearOutputLocal() {
-                    console.log("DPI Calculator V3: clearOutputLocal function called.");
-                    if (resultDiv) resultDiv.style.display = 'none';
-                    if (errorDiv) {
-                        errorDiv.style.display = 'none';
-                        if (errorDiv.firstChild) errorDiv.removeChild(errorDiv.firstChild); // Clear previous text
-                    }
-                }
-                
-                function showErrorLocal(message) {
-                    console.log("DPI Calculator V3: showErrorLocal function called with message:", message);
-                    clearOutputLocal(); 
-                    if (errorDiv) {
-                        errorDiv.textContent = message; // Use textContent for safety
-                        errorDiv.style.display = 'block';
-                    } else {
-                        console.error("DPI Calculator V3: errorDiv is null in showErrorLocal.");
-                    }
-                }
-                // --- End Helper functions ---
-
-                if (!currentDpiEl || !monitorVertResEl || !gameSeriesEl || !resultDiv || !calculatedDpiValueEl || !errorDiv) {
-                    console.error("DPI Calculator V3: One or more crucial elements NOT found inside click handler!");
-                    showErrorLocal("Internal error: UI elements missing. Please refresh.");
-                    return;
-                }
-                console.log("DPI Calculator V3: All crucial elements re-verified inside click handler.");
-
-                clearOutputLocal();
-
-                const currentDpiText = currentDpiEl.value;
-                const monitorHeightText = monitorVertResEl.value;
-                const gameRenderHeightText = gameSeriesEl.value;
-
-                console.log("DPI Calculator V3: Raw input values - DPI Text:", `"${currentDpiText}"`, "Monitor Height Text:", `"${monitorHeightText}"`, "Game Height Text:", `"${gameRenderHeightText}"`);
-
-                const currentDpi = parseFloat(currentDpiText);
-                const monitorHeight = parseFloat(monitorHeightText);
-                const gameRenderHeight = parseFloat(gameRenderHeightText);
-
-                console.log("DPI Calculator V3: Parsed inputs - DPI:", currentDpi, "Monitor Height:", monitorHeight, "Game Height:", gameRenderHeight);
-
-                // Input validation
-                if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 50000) {
-                    showErrorLocal('Please enter a valid current DPI (e.g., 50-50000).');
-                    return;
-                }
-                if (isNaN(monitorHeight) || monitorHeight < gameRenderHeight || monitorHeight > 10000) {
-                    showErrorLocal(`Please enter a valid monitor vertical resolution (e.g., at least ${gameRenderHeight} for the selected game, up to 10000).`);
-                    return;
-                }
-                if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) {
-                    showErrorLocal('Invalid game selection.');
-                    return;
-                }
-                console.log("DPI Calculator V3: Input validation passed.");
-
-                const scalingFactor = monitorHeight / gameRenderHeight;
-                console.log("DPI Calculator V3: Scaling Factor:", scalingFactor);
-
-                if (scalingFactor <= 0 || !isFinite(scalingFactor)) {
-                    showErrorLocal('Could not calculate scaling factor. Ensure monitor height is greater than zero and game height is valid.');
-                    return;
-                }
-
-                const newDpi = currentDpi / scalingFactor;
-                console.log("DPI Calculator V3: Calculated New DPI:", newDpi);
-
-                if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
-                    showErrorLocal('Could not calculate DPI. Please check your inputs.');
-                    return;
-                }
-                
-                calculatedDpiValueEl.textContent = Math.round(newDpi);
-                resultDiv.style.display = 'block';
-                console.log("DPI Calculator V3: Result displayed successfully.");
-
-            } else {
-                console.log("DPI Calculator V3: Click was on container, but not on the calculate button.");
-            }
-        });
-
-        // Input listeners for clearing output (still getting elements directly here for setup)
-        // These might also need to be handled via delegation if DOM is heavily manipulated by Retype
-        const initialCurrentDpiEl = document.getElementById('ndCurrentDpiV2');
-        const initialMonitorVertResEl = document.getElementById('ndMonitorVertRes');
-        const initialGameSeriesEl = document.getElementById('ndGameSeriesV2');
+        const currentDpiEl = document.getElementById('ndCurrentDpiV2');
+        const monitorVertResEl = document.getElementById('ndMonitorVertRes');
+        const gameSeriesEl = document.getElementById('ndGameSeriesV2');
+        const resultDiv = document.getElementById('ndDpiResultV2');
+        const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
+        const errorDiv = document.getElementById('ndDpiErrorV2');
         
-        function clearOutputForInputEvent() {
-            // Need to get resultDiv and errorDiv freshly or ensure they are defined in a wider scope
-            // For simplicity, let's assume they are still valid from the outer scope for this part.
-            const resultDivForClear = document.getElementById('ndDpiResultV2');
-            const errorDivForClear = document.getElementById('ndDpiErrorV2');
-
-            console.log("DPI Calculator V3: Input changed, calling clearOutput.");
-            if (resultDivForClear) resultDivForClear.style.display = 'none';
-            if (errorDivForClear) {
-                errorDivForClear.style.display = 'none';
-                 if (errorDivForClear.firstChild) errorDivForClear.removeChild(errorDivForClear.firstChild);
-            }
+        // Clear previous results
+        resultDiv.style.display = 'none';
+        errorDiv.style.display = 'none';
+        errorDiv.textContent = '';
+        
+        // Get and validate inputs
+        const currentDpi = parseFloat(currentDpiEl.value);
+        const monitorHeight = parseFloat(monitorVertResEl.value);
+        const gameRenderHeight = parseFloat(gameSeriesEl.value);
+        
+        if (isNaN(currentDpi) || currentDpi <= 0) {
+            errorDiv.textContent = 'Please enter a valid current DPI.';
+            errorDiv.style.display = 'block';
+            return;
         }
-
-        if (initialCurrentDpiEl) initialCurrentDpiEl.addEventListener('input', clearOutputForInputEvent);
-        if (initialMonitorVertResEl) initialMonitorVertResEl.addEventListener('input', clearOutputForInputEvent);
-        if (initialGameSeriesEl) initialGameSeriesEl.addEventListener('input', clearOutputForInputEvent);
-
-        console.log("DPI Calculator V3: Script setup complete.");
+        
+        if (isNaN(monitorHeight) || monitorHeight <= 0) {
+            errorDiv.textContent = 'Please enter a valid monitor height.';
+            errorDiv.style.display = 'block';
+            return;
+        }
+        
+        // Calculate and display result
+        const scalingFactor = monitorHeight / gameRenderHeight;
+        const newDpi = currentDpi / scalingFactor;
+        
+        calculatedDpiValueEl.textContent = Math.round(newDpi);
+        resultDiv.style.display = 'block';
     });
+});
 </script>
 
 ## Monitor
