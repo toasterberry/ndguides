@@ -21,6 +21,235 @@ Settings are also important. Navigate to your mouse settings in Windows, then cl
 
 You can instead adjust your mouse speed by changing your mouse's DPI. You should go for a relatively low sensitivity that still allows you plenty of physical room to move your mouse. These changes may feel jarring at first, but after quickly adjusting to them, they will feel much better.
 
+If you play the older games in full screen, you may notice your cursor moves way faster. A good solution is having a 2nd DPI option set in your mouse to compensate. Most gaming mice have software where you can set what DPI settings a button can switch between. If you want it to feel exactly the same as your desktop, use the calculator below to get a 2nd DPI value to use.
+
+<style>
+    .dpi-calculator-container {
+        border: 1px solid var(--color-border, #e0e0e0);
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        background-color: var(--color-background-offset, #f9f9f9); /* Light background, uses Retype var if available */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .dpi-calculator-container h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: var(--color-heading, #333); /* Uses Retype var for heading color if available */
+        font-size: 1.4em;
+    }
+    
+    .dpi-calculator-container p.description {
+        margin-bottom: 20px;
+        font-size: 0.95em;
+        color: var(--color-text-light, #555);
+    }
+
+    .dpi-calculator-input-group {
+        margin-bottom: 18px;
+    }
+
+    .dpi-calculator-input-group label {
+        display: block;
+        margin-bottom: 6px;
+        font-weight: 600;
+        color: var(--color-text, #444);
+        font-size: 0.95em;
+    }
+
+    .dpi-calculator-container input[type="number"],
+    .dpi-calculator-container select {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid var(--color-border, #ccc);
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 1em;
+        background-color: var(--color-input-background, #fff); /* Retype var for input background */
+        color: var(--color-input-text, #333); /* Retype var for input text */
+    }
+
+    .dpi-calculator-container input[type="number"]:focus,
+    .dpi-calculator-container select:focus {
+        border-color: var(--color-primary, #007bff);
+        outline: none;
+        box-shadow: 0 0 0 0.15rem var(--color-primary-shadow, rgba(0,123,255,.2));
+    }
+
+    .dpi-calculator-input-group small {
+        display: block;
+        margin-top: 6px;
+        color: var(--color-text-lighter, #777);
+        font-size: 0.85em;
+    }
+
+    .dpi-calculator-container button {
+        background-color: var(--color-primary, #007bff);
+        color: var(--color-primary-text, white);
+        padding: 10px 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        font-weight: 500;
+        transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .dpi-calculator-container button:hover {
+        background-color: var(--color-primary-hover, #0056b3);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .dpi-calculator-result {
+        margin-top: 20px;
+        padding: 15px;
+        background-color: var(--color-success-background, #e6f7ff); /* Light blue for result */
+        border: 1px solid var(--color-success-border, #b3e0ff);
+        border-left: 5px solid var(--color-primary, #007bff);
+        color: var(--color-success-text, #005f80);
+        border-radius: 5px;
+    }
+
+    .dpi-calculator-result h4 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+        color: var(--color-success-heading, #004c66);
+    }
+
+    .dpi-calculator-result strong {
+        font-size: 1.8em;
+        color: var(--color-primary, #007bff); /* Make the number stand out with primary color */
+    }
+    
+    .dpi-calculator-result small {
+        display: block;
+        margin-top: 8px;
+        font-size: 0.9em;
+    }
+
+    .dpi-calculator-error {
+        margin-top: 15px;
+        padding: 12px;
+        background-color: var(--color-danger-background, #ffebee); /* Light red for error */
+        border: 1px solid var(--color-danger-border, #ffcdd2);
+        border-left: 5px solid var(--color-danger, #c62828);
+        color: var(--color-danger-text, #c62828); /* Darker red text for error */
+        border-radius: 5px;
+        font-size: 0.95em;
+    }
+</style>
+
+<div class="dpi-calculator-container">
+    <h3>Mouse DPI Conversion Calculator</h3>
+    <p class="description">
+        Enter your current DPI, monitor resolution height, and what game you're running. 16-24 assume you're using "Full Screen 1" since 2 automatically uses your monitor's full resolution.
+    </p>
+
+    <div class="dpi-calculator-input-group">
+        <label for="ndCurrentDpiV2">Your Current Desktop DPI:</label>
+        <input type="number" id="ndCurrentDpiV2" name="ndCurrentDpiV2" placeholder="e.g., 800" min="50" step="50">
+    </div>
+
+    <div class="dpi-calculator-input-group">
+        <label for="ndMonitorVertRes">Your Desktop Monitor Height (in pixels):</label>
+        <input type="number" id="ndMonitorVertRes" name="ndMonitorVertRes" placeholder="e.g., 1080 for 1920x1080">
+        <small>Common values: 720 (HD), 1080 (Full HD), 1440 (QHD/2K), 2160 (UHD/4K)</small>
+    </div>
+
+    <div class="dpi-calculator-input-group">
+        <label for="ndGameSeriesV2">Target Game Series (determines in-game render height):</label>
+        <select id="ndGameSeriesV2" name="ndGameSeriesV2">
+            <option value="480">Games 1-16 (Game renders at 480p height)</option>
+            <option value="600">Games 17-24 (Game renders at 600p height)</option>
+        </select>
+    </div>
+
+    <button id="ndCalculateDpiBtnV2">Calculate Recommended In-Game DPI</button>
+
+    <div id="ndDpiResultV2" class="dpi-calculator-result" style="display:none;">
+        <h4>Recommended In-Game DPI:</h4>
+        <p><strong id="ndCalculatedDpiValueV2"></strong></p>
+        <small>Set your mouse to the closest DPI value your mouse software allows.</small>
+    </div>
+    <div id="ndDpiErrorV2" class="dpi-calculator-error" style="display:none;"></div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentDpiEl = document.getElementById('ndCurrentDpiV2');
+        const monitorVertResEl = document.getElementById('ndMonitorVertRes');
+        const gameSeriesEl = document.getElementById('ndGameSeriesV2'); // This value will be game_render_height
+        const calculateBtn = document.getElementById('ndCalculateDpiBtnV2');
+        const resultDiv = document.getElementById('ndDpiResultV2');
+        const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
+        const errorDiv = document.getElementById('ndDpiErrorV2');
+
+        function clearOutput() {
+            resultDiv.style.display = 'none';
+            errorDiv.style.display = 'none';
+            errorDiv.textContent = '';
+        }
+        
+        function showError(message) {
+            clearOutput();
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+
+        calculateBtn.addEventListener('click', function() {
+            clearOutput();
+
+            const currentDpi = parseFloat(currentDpiEl.value);
+            const monitorHeight = parseFloat(monitorVertResEl.value);
+            const gameRenderHeight = parseFloat(gameSeriesEl.value); // This is 480 or 600
+
+            // Input validation
+            if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 50000) {
+                showError('Please enter a valid current DPI (e.g., 50-50000).');
+                return;
+            }
+            if (isNaN(monitorHeight) || monitorHeight < gameRenderHeight || monitorHeight > 10000) { // Monitor height should be >= game height
+                showError(`Please enter a valid monitor vertical resolution (e.g., at least ${gameRenderHeight} for the selected game, up to 10000).`);
+                return;
+            }
+             if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) { // Should not happen with select
+                showError('Invalid game selection.');
+                return;
+            }
+
+            // Calculate Scaling Factor (SF)
+            const scalingFactor = monitorHeight / gameRenderHeight;
+
+            if (scalingFactor <= 0 || !isFinite(scalingFactor)) {
+                showError('Could not calculate scaling factor. Ensure monitor height is greater than zero and game height is valid.');
+                return;
+            }
+
+            // Calculate New DPI
+            // DPI_game = DPI_desktop / SF
+            const newDpi = currentDpi / scalingFactor;
+
+            if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
+                showError('Could not calculate DPI. Please check your inputs.');
+                return;
+            }
+            
+            calculatedDpiValueEl.textContent = Math.round(newDpi); // Round to nearest whole number
+            resultDiv.style.display = 'block';
+        });
+
+        // Optional: Clear results if inputs change
+        [currentDpiEl, monitorVertResEl, gameSeriesEl].forEach(el => {
+            el.addEventListener('input', clearOutput);
+        });
+    });
+</script>
+
 ## Monitor
 
 Your monitor primarily affects your reaction time. Most modern displays have a small delay between receiving content and actually displaying it. It's not uncommon to find a display with 50-100ms+ of latency. 100ms might not seem like much, but with just 10 instances of you performing any action based on reaction time, you've lost a full second solely due to your display. TVs are most prone to heavy latency, and should generally be avoided. Most computer monitors are better than TVs, but can vary.
