@@ -25,9 +25,9 @@ If you play the older games in full screen, you may notice your cursor moves way
 
 <style>
     .dpi-calculator-container {
-        background-color: var(--color-background-offset, #f8f9fa);
-        border: 1px solid var(--color-border, #dee2e6);
-        color: var(--color-text, #212529);
+        background-color: var(--color-background-offset);
+        border: 1px solid var(--color-border);
+        color: var(--color-text);
         padding: 20px;
         border-radius: 8px;
         margin-top: 25px;
@@ -35,40 +35,17 @@ If you play the older games in full screen, you may notice your cursor moves way
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
-    /* Dark mode support */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-container {
-            background-color: var(--color-background-offset, #1e1e1e);
-            border-color: var(--color-border, #404040);
-            color: var(--color-text, #e0e0e0);
-        }
-    }
-
     .dpi-calculator-container h3 {
         margin-top: 0;
         margin-bottom: 15px;
-        color: var(--color-heading, #343a40);
+        color: var(--color-heading);
         font-size: 1.4em;
-    }
-
-    /* Dark mode heading */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-container h3 {
-            color: var(--color-heading, #ffffff);
-        }
     }
     
     .dpi-calculator-container p.description {
         margin-bottom: 20px;
         font-size: 0.95em;
-        color: var(--color-text-light, #495057);
-    }
-
-    /* Dark mode description */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-container p.description {
-            color: var(--color-text-light, #b0b0b0);
-        }
+        color: var(--color-text-light);
     }
 
     .dpi-calculator-input-group {
@@ -79,57 +56,38 @@ If you play the older games in full screen, you may notice your cursor moves way
         display: block;
         margin-bottom: 6px;
         font-weight: 600;
-        color: var(--color-text, #212529);
+        color: var(--color-text);
         font-size: 0.95em;
-    }
-
-    /* Dark mode labels */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-input-group label {
-            color: var(--color-text, #e0e0e0);
-        }
     }
 
     .dpi-calculator-container input[type="number"],
     .dpi-calculator-container select {
         width: 100%;
         padding: 12px;
-        border: 1px solid var(--color-input-border, #ced4da);
+        border: 1px solid var(--color-input-border);
         border-radius: 5px;
         box-sizing: border-box;
         font-size: 1em;
-        background-color: var(--color-input-background, #ffffff);
-        color: var(--color-input-text, #495057);
+        background-color: var(--color-input-background);
+        color: var(--color-input-text);
         min-height: 44px;
         line-height: 1.4;
-    }
-
-    /* Dark mode inputs */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-container input[type="number"],
-        .dpi-calculator-container select {
-            background-color: var(--color-input-background, #2d2d2d);
-            border-color: var(--color-input-border, #555555);
-            color: var(--color-input-text, #e0e0e0);
-        }
     }
     
     .dpi-calculator-container select {
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
-        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-image: var(--select-arrow-light);
         background-repeat: no-repeat;
         background-position: right 12px center;
         background-size: 12px;
         padding-right: 36px;
     }
 
-    /* Dark mode select arrow */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-container select {
-            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23cccccc%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-        }
+    /* Define arrow images as CSS variables that Retype can override */
+    :root {
+        --select-arrow-light: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
     }
 
     .dpi-calculator-container input[type="number"]:focus,
@@ -142,15 +100,8 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-input-group small {
         display: block;
         margin-top: 6px;
-        color: var(--color-text-lighter, #6c757d);
+        color: var(--color-text-lighter);
         font-size: 0.85em;
-    }
-
-    /* Dark mode small text */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-input-group small {
-            color: var(--color-text-lighter, #999999);
-        }
     }
 
     .dpi-calculator-container button {
@@ -175,46 +126,23 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-result {
         margin-top: 20px;
         padding: 15px;
-        background-color: var(--color-success-background, #d1e7dd);
-        border: 1px solid var(--color-success-border, #badbcc);
-        border-left: 5px solid var(--color-success, #198754);
-        color: var(--color-success-text, #0a3622);
+        background-color: var(--color-success-background);
+        border: 1px solid var(--color-success-border);
+        border-left: 5px solid var(--color-success);
+        color: var(--color-success-text);
         border-radius: 5px;
-    }
-
-    /* Dark mode success */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-result {
-            background-color: var(--color-success-background, #0f2419);
-            border-color: var(--color-success-border, #1e4d2b);
-            color: var(--color-success-text, #75dd88);
-        }
     }
 
     .dpi-calculator-result h4 {
         margin-top: 0;
         margin-bottom: 8px;
         font-size: 1.1em;
-        color: var(--color-success-heading, #0a3622);
-    }
-
-    /* Dark mode success heading */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-result h4 {
-            color: var(--color-success-heading, #75dd88);
-        }
+        color: var(--color-success-heading);
     }
 
     .dpi-calculator-result strong {
         font-size: 1.8em;
-        color: var(--color-success, #198754);
-    }
-
-    /* Dark mode success strong */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-result strong {
-            color: var(--color-success, #28a745);
-        }
+        color: var(--color-success);
     }
     
     .dpi-calculator-result small {
@@ -226,21 +154,12 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-error {
         margin-top: 15px;
         padding: 12px;
-        background-color: var(--color-danger-background, #f8d7da);
-        border: 1px solid var(--color-danger-border, #f5c2c7);
-        border-left: 5px solid var(--color-danger, #dc3545);
-        color: var(--color-danger-text, #58151c);
+        background-color: var(--color-danger-background);
+        border: 1px solid var(--color-danger-border);
+        border-left: 5px solid var(--color-danger);
+        color: var(--color-danger-text);
         border-radius: 5px;
         font-size: 0.95em;
-    }
-
-    /* Dark mode error */
-    @media (prefers-color-scheme: dark) {
-        .dpi-calculator-error {
-            background-color: var(--color-danger-background, #2d1b1b);
-            border-color: var(--color-danger-border, #5c2e2e);
-            color: var(--color-danger-text, #ff6b6b);
-        }
     }
 </style>
 
