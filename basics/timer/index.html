@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-root" content="/ndguides">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.9.0.802427750153">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.9.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Timer</title>
+    <meta name="title" content="Timer">
+    <meta name="description" content="The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://toasterberry.github.io/ndguides/basics/timer/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://toasterberry.github.io/ndguides/basics/timer/">
+    <meta property="og:title" content="Timer">
+    <meta property="og:description" content="The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout.">
+    <meta property="og:image" content="https://toasterberry.github.io/ndguides/images/timer/livesplitnew.avif">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://toasterberry.github.io/ndguides/basics/timer/">
+    <meta property="twitter:title" content="Timer">
+    <meta property="twitter:description" content="The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout.">
+    <meta property="twitter:image" content="https://toasterberry.github.io/ndguides/images/timer/livesplitnew.avif">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../resources/css/retype.css?v=3.9.0.802427750153" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.9.0.802427750153" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.9.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.9.0.802427750153" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="docs-site-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton docs-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="docs-sidebar-toggle"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">NDGuides</span>
+                        </a>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                        <g fill="currentColor">
+                                            <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                        </g>
+                                    </svg>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="docs-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-white border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="../../">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px mr-1" width="18" height="18" viewBox="0 0 24 24" role="presentation">
+                                                <g fill="currentColor">
+                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                                </g>
+                                            </svg>
+                                            <span>Home</span>
+                                        </a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="docs-markdown" id="docs-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="docs-sidebar-right-toggle"></div>
+                                <!-- Page content  -->
+<doc-anchor-target id="timer" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#timer">#</doc-anchor-trigger>
+        <span>Timer</span>
+    </h1>
+</doc-anchor-target>
+<p>The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout. Although you can use any kind of timer, <a href="https://livesplit.org/">LiveSplit</a> is the go-to. It&#x27;s very customizable and has support for autosplitters. It may seem intimidating to setup, but it&#x27;s very straight forward.</p>
+<doc-anchor-target id="basic-setup">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basic-setup">#</doc-anchor-trigger>
+        <span>Basic Setup</span>
+    </h2>
+</doc-anchor-target>
+<p>Head to <a href="https://livesplit.org/">https://livesplit.org/</a> and download LiveSplit. Navigate to the newly downloaded file, right click it, click &quot;Extract all&quot;, then &quot;Extract&quot;. You&#x27;ll now have a folder that contains the program. You can put this anywhere you like. In the folder, double click &quot;LiveSplit&quot; to open it. A small black window will pop up. This is LiveSplit at its core, but it&#x27;s easy to make it look much better.</p>
+<p><figure class="content-center">
+    <img src="../../images/timer/livesplitnew.avif" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>First, let&#x27;s go over basic settings. Right click the black window, and click &quot;Settings&quot;. You can adjust the hotkeys for everything as you like. Try to find some keys you won&#x27;t naturally use, and won&#x27;t accidentally press. Common choices are numpad or Insert/Home/End keys.</p>
+<p>Afterwards, enable &quot;Global Hotkeys&quot;, and click OK.</p>
+<doc-anchor-target id="splits">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#splits">#</doc-anchor-trigger>
+        <span>Splits</span>
+    </h2>
+</doc-anchor-target>
+<p>Your timer is still really short and doesn&#x27;t do much besides starting and stopping. Let&#x27;s fix that. Right click the timer, then click &quot;Edit Splits&quot;. Here you can set the game and category you&#x27;re running. Immediately you&#x27;ll see LiveSplit take shape.</p>
+<p><figure class="content-center">
+    <img src="../../images/timer/takingshape.avif" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Now let&#x27;s fill up that empty space. A &quot;split&quot; is a point you can add in your timer to represent some kind of event from the game, often things like reaching an area, or completing a puzzle. It&#x27;s similar to a &quot;lap&quot; in a race. This breaks your run up into smaller segments so you can track your performance throughout different portions of the game. They can also be used to see a best theoretical time using your best times for each split.</p>
+<p>To add splits, click the &quot;Insert Above/Below&quot; button on the left. You can name them anything you want, they don&#x27;t have to match anything. You can add as many or as few as you like. Your last split in this list will be treated as your end split.</p>
+<p><figure class="content-center">
+    <img src="../../images/timer/splitswrittenout.avif" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="autosplitters">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autosplitters">#</doc-anchor-trigger>
+        <span>Autosplitters</span>
+    </h2>
+</doc-anchor-target>
+<p>Autosplitters automate your timer for you. This allows you to focus on the game instead of timing keyboard presses to control your timer. While still in the &quot;Edit Splits&quot; menu, if an autosplitter is available for the game set, you&#x27;ll see an &quot;Activate&quot; button. After clicking it, click the &quot;Settings&quot; button next to it. These control which parts of the game will automatically split for you. Start/stop is already automatic at this point.</p>
+<p>It&#x27;s important to note that the automatic splits effectively press your split hotkey when it sees you&#x27;re at a certain part of the game. This means you have to ensure the amount of splits you have match the split checkboxes you ticked in the settings. If you wanted to split at 3 unique points in game, you&#x27;d enable 3 of the corresponding checkboxes, add 3 unique splits, plus your ending split.</p>
+<p><figure class="content-center">
+    <img src="../../images/timer/autosplittersplits.avif" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Autosplitters should work seamlessly once they&#x27;re activated. They can detect when the game is open/closed, and should start once you select a difficulty. If you&#x27;re having trouble with an autosplitter, see &quot;Autosplitter Troubleshooting&quot; at the bottom of this page.</p>
+<doc-anchor-target id="layout">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#layout">#</doc-anchor-trigger>
+        <span>Layout</span>
+    </h2>
+</doc-anchor-target>
+<p>The layout controls how your timer looks. With all other menus closed, right click the timer, and click &quot;Edit Layout&quot;. Here you&#x27;ll see elements of your layout. The game title, your splits, the timer, and &quot;Previous Segment&quot; by default. You can click the + icon on the left to add new elements. A popular one is &quot;Sum of Best&quot; under &quot;Information&quot;, which shows your theoretical best possible time based on your historical best split times. You can configure each of these by double clicking them, or remove one by clicking it, and then clicking the - on the left.</p>
+<p>To change the look of the general layout, click &quot;Layout Settings&quot; at the bottom left. You can change the colors, font, add a background, and more. You can spend some time experimenting with the layout to make it your own, or just keep it simple.</p>
+<p>You can also adjust the size of the window by hovering over the edges and corners of the main timer window. Having it larger will make it look clearer in your recordings.</p>
+<p>Just like that, you have a fully setup and fancy looking timer! Save your layout and splits by right clicking the main timer window. You can use the same layout across multiple games if you want, but splits are game and category specific. Each game and category you setup should have their own splits file. If you need to change the game/category, right click the timer, click &quot;Close Splits&quot;, and edit the splits from scratch like before.</p>
+<p><figure class="content-center">
+    <img src="../../images/timer/customized.avif" alt="" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="extra-tips">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#extra-tips">#</doc-anchor-trigger>
+        <span>Extra Tips</span>
+    </h2>
+</doc-anchor-target>
+<p>Here&#x27;s some unorganized information you may find useful:</p>
+<ul>
+<li>The number at the top right is your attempts.</li>
+<li>A green colored split means it&#x27;s faster than the time you got for that split in your best full run PB, red is worse, gold/rainbow means a new PB for that individual split.</li>
+</ul>
+<doc-anchor-target id="autosplitter-faq">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autosplitter-faq">#</doc-anchor-trigger>
+        <span>Autosplitter FAQ</span>
+    </h2>
+</doc-anchor-target>
+<doc-panels>
+   <doc-panel id="it-isnt-working" collapsed>
+       <template #title>It isn&#x27;t working</template>
+<p>Typically this is because the autosplitter lacks compatibility with your version. Many autosplitters were made only with access to the disc versions, and steam versions usually won&#x27;t immediately work them. You can get support for other versions added by joining the Nancy Drew Speedrunning Discord server and asking about it in the game&#x27;s appropriate channel.</p>
+   </doc-panel>
+   <doc-panel id="it-only-partially-works" collapsed>
+       <template #title>It only partially works</template>
+<p>Partial functionality usually happens when you accidentally have two autosplitters at once, usually one from the splits menu, and one from a local file added with the layout menu. Disable/remove the extra one. If you&#x27;re still experiencing inconsistency, ask about it in the Nancy Drew Speedrunning Discord server.</p>
+   </doc-panel>
+   <doc-panel id="how-do-i-use-an-asl-file" collapsed>
+       <template #title>How do I use an .asl file?</template>
+<p>Right click your timer, click &quot;Edit Layout&quot;, click the + at the top left, hover over &quot;control&quot;, click &quot;Scriptable Auto Splitter&quot; to add it to the list. Double click it in the list, click &quot;Browse&quot; and find the .asl you downloaded. Configuration now is the same as before.</p>
+   </doc-panel>
+   <doc-panel id="what-is-auto-reset" collapsed>
+       <template #title>What is auto reset?</template>
+<p>Auto reset will automatically reset your timer at the difficulty select screen under certain circumstances. This is useful if you&#x27;re resetting a lot at the start of a run. It won&#x27;t activate if you already completed a run and haven&#x27;t manually reset your timer, or if you got a new best split.</p>
+   </doc-panel>
+</doc-panels>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer class="clear-both">
+                            
+                            </footer>
+                        </main>
+                
+                        <div class="print:border-none border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                        <li>
+                                            <a class="block mr-4 py-2 text-sm whitespace-nowrap transition-colors duration-200 ease-linear text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 md:mb-0" href="../../license/">License</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="print:justify-center docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p><a href="https://discordapp.com/invite/GWD8j8M">Nancy Drew Speedrunning Discord</a></p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="docs-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Timer", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+</body>
+</html>
