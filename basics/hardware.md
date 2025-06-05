@@ -150,33 +150,33 @@ If you play the older games in full screen, you may notice your cursor moves way
         Enter your current DPI, monitor resolution height, and what game you're running. 16-24 assume you're using "Full Screen 1" since 2 automatically uses your monitor's full resolution.
     </p>
 
-    <div class="dpi-calculator-input-group">
-        <label for="ndCurrentDpiV2">Your Current Desktop DPI:</label>
-        <input type="number" id="ndCurrentDpiV2" name="ndCurrentDpiV2" placeholder="e.g., 800" min="50" step="50">
-    </div>
+<div class="dpi-calculator-input-group">
+    <label for="ndCurrentDpiV2">Your Current Desktop DPI:</label>
+    <input type="number" id="ndCurrentDpiV2" name="ndCurrentDpiV2" placeholder="e.g., 800" min="50" step="50">
+</div>
 
-    <div class="dpi-calculator-input-group">
-        <label for="ndMonitorVertRes">Your Desktop Monitor Height (in pixels):</label>
-        <input type="number" id="ndMonitorVertRes" name="ndMonitorVertRes" placeholder="e.g., 1080 for 1920x1080">
-        <small>Common values: 720 (HD), 1080 (Full HD), 1440 (QHD/2K), 2160 (UHD/4K)</small>
-    </div>
+<div class="dpi-calculator-input-group">
+    <label for="ndMonitorVertRes">Your Desktop Monitor Height (in pixels):</label>
+    <input type="number" id="ndMonitorVertRes" name="ndMonitorVertRes" placeholder="e.g., 1080 for 1920x1080">
+    <small>Common values: 720 (HD), 1080 (Full HD), 1440 (QHD/2K), 2160 (UHD/4K)</small>
+</div>
 
-    <div class="dpi-calculator-input-group">
-        <label for="ndGameSeriesV2">Target Game Series (determines in-game render height):</label>
-        <select id="ndGameSeriesV2" name="ndGameSeriesV2">
-            <option value="480">Games 1-16 (Game renders at 480p height)</option>
-            <option value="600">Games 17-24 (Game renders at 600p height)</option>
-        </select>
-    </div>
+<div class="dpi-calculator-input-group">
+    <label for="ndGameSeriesV2">Target Game Series (determines in-game render height):</label>
+    <select id="ndGameSeriesV2" name="ndGameSeriesV2">
+        <option value="480">Games 1-16 (Game renders at 480p height)</option>
+        <option value="600">Games 17-24 (Game renders at 600p height)</option>
+    </select>
+</div>
 
-    <button id="ndCalculateDpiBtnV2">Calculate Recommended In-Game DPI</button>
+<button id="ndCalculateDpiBtnV2">Calculate Recommended In-Game DPI</button>
 
-    <div id="ndDpiResultV2" class="dpi-calculator-result" style="display:none;">
-        <h4>Recommended In-Game DPI:</h4>
-        <p><strong id="ndCalculatedDpiValueV2"></strong></p>
-        <small>Set your mouse to the closest DPI value your mouse software allows.</small>
-    </div>
-    <div id="ndDpiErrorV2" class="dpi-calculator-error" style="display:none;"></div>
+<div id="ndDpiResultV2" class="dpi-calculator-result" style="display:none;">
+    <h4>Recommended In-Game DPI:</h4>
+    <p><strong id="ndCalculatedDpiValueV2"></strong></p>
+    <small>Set your mouse to the closest DPI value your mouse software allows.</small>
+</div>
+<div id="ndDpiErrorV2" class="dpi-calculator-error" style="display:none;"></div>
 </div>
 
 <script>
