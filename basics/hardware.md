@@ -25,26 +25,28 @@ If you play the older games in full screen, you may notice your cursor moves way
 
 <style>
     .dpi-calculator-container {
-        border: 1px solid var(--color-border, #e0e0e0);
+        /* Retype variables with more robust fallbacks */
+        background-color: var(--color-background-offset, #f8f9fa); /* Light gray fallback for light mode */
+        border: 1px solid var(--color-border, #dee2e6); /* Gray border fallback */
+        color: var(--color-text, #212529); /* Default text color fallback (dark) */
         padding: 20px;
         border-radius: 8px;
         margin-top: 25px;
         margin-bottom: 25px;
-        background-color: var(--color-background-offset, #f9f9f9); /* Light background, uses Retype var if available */
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
 
     .dpi-calculator-container h3 {
         margin-top: 0;
         margin-bottom: 15px;
-        color: var(--color-heading, #333); /* Uses Retype var for heading color if available */
+        color: var(--color-heading, #343a40); /* Darker gray for heading fallback */
         font-size: 1.4em;
     }
     
     .dpi-calculator-container p.description {
         margin-bottom: 20px;
         font-size: 0.95em;
-        color: var(--color-text-light, #555);
+        color: var(--color-text-light, #495057); /* Slightly lighter text for description */
     }
 
     .dpi-calculator-input-group {
@@ -55,7 +57,7 @@ If you play the older games in full screen, you may notice your cursor moves way
         display: block;
         margin-bottom: 6px;
         font-weight: 600;
-        color: var(--color-text, #444);
+        color: var(--color-text, #212529); /* Default text color for labels */
         font-size: 0.95em;
     }
 
@@ -63,31 +65,45 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-container select {
         width: 100%;
         padding: 10px 12px;
-        border: 1px solid var(--color-border, #ccc);
+        border: 1px solid var(--color-input-border, #ced4da); /* Input border fallback */
         border-radius: 5px;
         box-sizing: border-box;
         font-size: 1em;
-        background-color: var(--color-input-background, #fff); /* Retype var for input background */
-        color: var(--color-input-text, #333); /* Retype var for input text */
+        background-color: var(--color-input-background, #ffffff); /* White background for inputs */
+        color: var(--color-input-text, #495057); /* Text color for inputs */
+        min-height: 40px; /* Ensure select is tall enough */
     }
+    
+    /* Specific styling for select to try and improve readability */
+    .dpi-calculator-container select {
+        appearance: none; /* Remove default OS styling to have more control */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007 категории%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 10px;
+        padding-right: 30px; /* Make space for the custom arrow */
+    }
+
 
     .dpi-calculator-container input[type="number"]:focus,
     .dpi-calculator-container select:focus {
-        border-color: var(--color-primary, #007bff);
+        border-color: var(--color-primary, #007bff); /* Primary color for focus border */
         outline: none;
-        box-shadow: 0 0 0 0.15rem var(--color-primary-shadow, rgba(0,123,255,.2));
+        box-shadow: 0 0 0 0.15rem var(--color-primary-shadow, rgba(0,123,255,.25)); /* Focus shadow */
     }
 
     .dpi-calculator-input-group small {
         display: block;
         margin-top: 6px;
-        color: var(--color-text-lighter, #777);
+        color: var(--color-text-lighter, #6c757d); /* Lighter text for small hints */
         font-size: 0.85em;
     }
 
     .dpi-calculator-container button {
-        background-color: var(--color-primary, #007bff);
-        color: var(--color-primary-text, white);
+        background-color: var(--color-primary, #007bff); /* Primary button color */
+        color: var(--color-primary-text, white); /* Text on primary button */
         padding: 10px 18px;
         border: none;
         border-radius: 5px;
@@ -100,17 +116,17 @@ If you play the older games in full screen, you may notice your cursor moves way
     }
 
     .dpi-calculator-container button:hover {
-        background-color: var(--color-primary-hover, #0056b3);
+        background-color: var(--color-primary-hover, #0056b3); /* Darker primary on hover */
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .dpi-calculator-result {
         margin-top: 20px;
         padding: 15px;
-        background-color: var(--color-success-background, #e6f7ff); /* Light blue for result */
-        border: 1px solid var(--color-success-border, #b3e0ff);
-        border-left: 5px solid var(--color-primary, #007bff);
-        color: var(--color-success-text, #005f80);
+        background-color: var(--color-success-background, #d1e7dd); /* Success background */
+        border: 1px solid var(--color-success-border, #badbcc);   /* Success border */
+        border-left: 5px solid var(--color-success, #198754);      /* Success left accent */
+        color: var(--color-success-text, #0a3622);                /* Success text */
         border-radius: 5px;
     }
 
@@ -118,12 +134,12 @@ If you play the older games in full screen, you may notice your cursor moves way
         margin-top: 0;
         margin-bottom: 8px;
         font-size: 1.1em;
-        color: var(--color-success-heading, #004c66);
+        color: var(--color-success-heading, #0a3622); /* Darker success text for heading */
     }
 
     .dpi-calculator-result strong {
         font-size: 1.8em;
-        color: var(--color-primary, #007bff); /* Make the number stand out with primary color */
+        color: var(--color-success, #198754); /* Make the number stand out with success color */
     }
     
     .dpi-calculator-result small {
@@ -135,118 +151,158 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-error {
         margin-top: 15px;
         padding: 12px;
-        background-color: var(--color-danger-background, #ffebee); /* Light red for error */
-        border: 1px solid var(--color-danger-border, #ffcdd2);
-        border-left: 5px solid var(--color-danger, #c62828);
-        color: var(--color-danger-text, #c62828); /* Darker red text for error */
+        background-color: var(--color-danger-background, #f8d7da); /* Danger background */
+        border: 1px solid var(--color-danger-border, #f5c2c7);    /* Danger border */
+        border-left: 5px solid var(--color-danger, #dc3545);       /* Danger left accent */
+        color: var(--color-danger-text, #58151c);                 /* Danger text */
         border-radius: 5px;
         font-size: 0.95em;
     }
 </style>
 
 <div class="dpi-calculator-container">
-    <h3>Mouse DPI Conversion Calculator</h3>
+    <h3>Mouse DPI Conversion Calculator (Physical Screen Consistency)</h3>
     <p class="description">
-        Enter your current DPI, monitor resolution height, and what game you're running. 16-24 assume you're using "Full Screen 1" since 2 automatically uses your monitor's full resolution.
+        This calculator helps you find an in-game DPI so your mouse movement feels the same in terms of physical distance covered on your screen,
+        counteracting the sensitivity change from low-resolution games being scaled up. Assumes the game is fullscreen and scaled to fit your monitor's height (with black bars on sides).
     </p>
 
-<div class="dpi-calculator-input-group">
-    <label for="ndCurrentDpiV2">Your Current Desktop DPI:</label>
-    <input type="number" id="ndCurrentDpiV2" name="ndCurrentDpiV2" placeholder="e.g., 800" min="50" step="50">
-</div>
+    <div class="dpi-calculator-input-group">
+        <label for="ndCurrentDpiV2">Your Current Desktop DPI:</label>
+        <input type="number" id="ndCurrentDpiV2" name="ndCurrentDpiV2" placeholder="e.g., 800" min="50" step="50">
+    </div>
 
-<div class="dpi-calculator-input-group">
-    <label for="ndMonitorVertRes">Your Desktop Monitor Height (in pixels):</label>
-    <input type="number" id="ndMonitorVertRes" name="ndMonitorVertRes" placeholder="e.g., 1080 for 1920x1080">
-    <small>Common values: 720 (HD), 1080 (Full HD), 1440 (QHD/2K), 2160 (UHD/4K)</small>
-</div>
+    <div class="dpi-calculator-input-group">
+        <label for="ndMonitorVertRes">Your Desktop Monitor Height (in pixels):</label>
+        <input type="number" id="ndMonitorVertRes" name="ndMonitorVertRes" placeholder="e.g., 1080 for 1920x1080">
+        <small>Common values: 720 (HD), 1080 (Full HD), 1440 (QHD/2K), 2160 (UHD/4K)</small>
+    </div>
 
-<div class="dpi-calculator-input-group">
-    <label for="ndGameSeriesV2">Target Game Series (determines in-game render height):</label>
-    <select id="ndGameSeriesV2" name="ndGameSeriesV2">
-        <option value="480">Games 1-16 (Game renders at 480p height)</option>
-        <option value="600">Games 17-24 (Game renders at 600p height)</option>
-    </select>
-</div>
+    <div class="dpi-calculator-input-group">
+        <label for="ndGameSeriesV2">Target Game Series (determines in-game render height):</label>
+        <select id="ndGameSeriesV2" name="ndGameSeriesV2">
+            <option value="480">Games 1-16 (Game renders at 480p height)</option>
+            <option value="600">Games 17-24 (Game renders at 600p height)</option>
+        </select>
+    </div>
 
-<button id="ndCalculateDpiBtnV2">Calculate Recommended In-Game DPI</button>
+    <button id="ndCalculateDpiBtnV2">Calculate Recommended In-Game DPI</button>
 
-<div id="ndDpiResultV2" class="dpi-calculator-result" style="display:none;">
-    <h4>Recommended In-Game DPI:</h4>
-    <p><strong id="ndCalculatedDpiValueV2"></strong></p>
-    <small>Set your mouse to the closest DPI value your mouse software allows.</small>
-</div>
-<div id="ndDpiErrorV2" class="dpi-calculator-error" style="display:none;"></div>
+    <div id="ndDpiResultV2" class="dpi-calculator-result" style="display:none;">
+        <h4>Recommended In-Game DPI:</h4>
+        <p><strong id="ndCalculatedDpiValueV2"></strong></p>
+        <small>Set your mouse to the closest DPI value your mouse software allows.</small>
+    </div>
+    <div id="ndDpiErrorV2" class="dpi-calculator-error" style="display:none;"></div>
 </div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+        console.log("DPI Calculator: DOMContentLoaded event fired. Script starting.");
+
         const currentDpiEl = document.getElementById('ndCurrentDpiV2');
         const monitorVertResEl = document.getElementById('ndMonitorVertRes');
-        const gameSeriesEl = document.getElementById('ndGameSeriesV2'); // This value will be game_render_height
+        const gameSeriesEl = document.getElementById('ndGameSeriesV2');
         const calculateBtn = document.getElementById('ndCalculateDpiBtnV2');
         const resultDiv = document.getElementById('ndDpiResultV2');
         const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
         const errorDiv = document.getElementById('ndDpiErrorV2');
 
+        // Check if all elements were found
+        if (!currentDpiEl) console.error("DPI Calculator: Element with ID 'ndCurrentDpiV2' not found!");
+        if (!monitorVertResEl) console.error("DPI Calculator: Element with ID 'ndMonitorVertRes' not found!");
+        if (!gameSeriesEl) console.error("DPI Calculator: Element with ID 'ndGameSeriesV2' not found!");
+        if (!calculateBtn) console.error("DPI Calculator: Element with ID 'ndCalculateDpiBtnV2' not found!");
+        if (!resultDiv) console.error("DPI Calculator: Element with ID 'ndDpiResultV2' not found!");
+        if (!calculatedDpiValueEl) console.error("DPI Calculator: Element with ID 'ndCalculatedDpiValueV2' not found!");
+        if (!errorDiv) console.error("DPI Calculator: Element with ID 'ndDpiErrorV2' not found!");
+
         function clearOutput() {
-            resultDiv.style.display = 'none';
-            errorDiv.style.display = 'none';
-            errorDiv.textContent = '';
+            console.log("DPI Calculator: clearOutput called.");
+            if (resultDiv) resultDiv.style.display = 'none';
+            if (errorDiv) {
+                errorDiv.style.display = 'none';
+                errorDiv.textContent = '';
+            }
         }
         
         function showError(message) {
+            console.log("DPI Calculator: showError called with message:", message);
             clearOutput();
-            errorDiv.textContent = message;
-            errorDiv.style.display = 'block';
+            if (errorDiv) {
+                errorDiv.textContent = message;
+                errorDiv.style.display = 'block';
+            } else {
+                console.error("DPI Calculator: errorDiv not found, cannot show error message.");
+            }
         }
 
-        calculateBtn.addEventListener('click', function() {
-            clearOutput();
+        if (calculateBtn) {
+            console.log("DPI Calculator: 'Calculate' button found. Attaching event listener.");
+            calculateBtn.addEventListener('click', function() {
+                console.log("DPI Calculator: 'Calculate' button clicked.");
+                clearOutput();
 
-            const currentDpi = parseFloat(currentDpiEl.value);
-            const monitorHeight = parseFloat(monitorVertResEl.value);
-            const gameRenderHeight = parseFloat(gameSeriesEl.value); // This is 480 or 600
+                // Ensure elements are still valid before accessing .value
+                if (!currentDpiEl || !monitorVertResEl || !gameSeriesEl) {
+                    showError("A required input element is missing. Please refresh the page.");
+                    return;
+                }
 
-            // Input validation
-            if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 50000) {
-                showError('Please enter a valid current DPI (e.g., 50-50000).');
-                return;
-            }
-            if (isNaN(monitorHeight) || monitorHeight < gameRenderHeight || monitorHeight > 10000) { // Monitor height should be >= game height
-                showError(`Please enter a valid monitor vertical resolution (e.g., at least ${gameRenderHeight} for the selected game, up to 10000).`);
-                return;
-            }
-             if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) { // Should not happen with select
-                showError('Invalid game selection.');
-                return;
-            }
+                const currentDpi = parseFloat(currentDpiEl.value);
+                const monitorHeight = parseFloat(monitorVertResEl.value);
+                const gameRenderHeight = parseFloat(gameSeriesEl.value);
 
-            // Calculate Scaling Factor (SF)
-            const scalingFactor = monitorHeight / gameRenderHeight;
+                console.log("DPI Calculator: Inputs - DPI:", currentDpi, "Monitor Height:", monitorHeight, "Game Height:", gameRenderHeight);
 
-            if (scalingFactor <= 0 || !isFinite(scalingFactor)) {
-                showError('Could not calculate scaling factor. Ensure monitor height is greater than zero and game height is valid.');
-                return;
-            }
+                // Input validation
+                if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 50000) {
+                    showError('Please enter a valid current DPI (e.g., 50-50000).');
+                    return;
+                }
+                if (isNaN(monitorHeight) || monitorHeight < gameRenderHeight || monitorHeight > 10000) {
+                    showError(`Please enter a valid monitor vertical resolution (e.g., at least ${gameRenderHeight} for the selected game, up to 10000).`);
+                    return;
+                }
+                if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) {
+                    showError('Invalid game selection.'); // Should not happen with select
+                    return;
+                }
 
-            // Calculate New DPI
-            // DPI_game = DPI_desktop / SF
-            const newDpi = currentDpi / scalingFactor;
+                const scalingFactor = monitorHeight / gameRenderHeight;
+                console.log("DPI Calculator: Scaling Factor:", scalingFactor);
 
-            if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
-                showError('Could not calculate DPI. Please check your inputs.');
-                return;
-            }
-            
-            calculatedDpiValueEl.textContent = Math.round(newDpi); // Round to nearest whole number
-            resultDiv.style.display = 'block';
-        });
+                if (scalingFactor <= 0 || !isFinite(scalingFactor)) {
+                    showError('Could not calculate scaling factor. Ensure monitor height is greater than zero and game height is valid.');
+                    return;
+                }
+
+                const newDpi = currentDpi / scalingFactor;
+                console.log("DPI Calculator: Calculated New DPI:", newDpi);
+
+                if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
+                    showError('Could not calculate DPI. Please check your inputs.');
+                    return;
+                }
+                
+                if (calculatedDpiValueEl && resultDiv) {
+                    calculatedDpiValueEl.textContent = Math.round(newDpi);
+                    resultDiv.style.display = 'block';
+                    console.log("DPI Calculator: Result displayed.");
+                } else {
+                    console.error("DPI Calculator: Result display elements not found.");
+                }
+            });
+        } else {
+            console.error("DPI Calculator: 'Calculate' button (ndCalculateDpiBtnV2) was not found. Event listener NOT attached.");
+        }
 
         // Optional: Clear results if inputs change
-        [currentDpiEl, monitorVertResEl, gameSeriesEl].forEach(el => {
-            el.addEventListener('input', clearOutput);
-        });
+        if (currentDpiEl && monitorVertResEl && gameSeriesEl) {
+            [currentDpiEl, monitorVertResEl, gameSeriesEl].forEach(el => {
+                el.addEventListener('input', clearOutput);
+            });
+        }
     });
 </script>
 
