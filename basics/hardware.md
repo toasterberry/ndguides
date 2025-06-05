@@ -197,112 +197,169 @@ If you play the older games in full screen, you may notice your cursor moves way
 </div>
 
 <script>
-// Test 1: Script execution
-console.log("=== DPI Calculator Debug Start ===");
+// Working DPI Calculator - Replace your current script with this
 
-// Test 2: Immediate element check (before DOM ready)
-console.log("Button exists immediately:", !!document.getElementById('ndCalculateDpiBtnV2'));
+console.log("DPI Calculator: Script loading...");
 
-// Test 3: Multiple DOM ready approaches
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("=== DOMContentLoaded fired ===");
-    testElements();
-});
-
-// Alternative DOM ready
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', testElements);
-} else {
-    console.log("=== DOM already ready, calling testElements immediately ===");
-    testElements();
-}
-
-// Test 4: Window load (later than DOM ready)
-window.addEventListener('load', function() {
-    console.log("=== Window load fired ===");
-    testElements();
-});
-
-// Test 5: Delayed check (in case of dynamic content)
-setTimeout(function() {
-    console.log("=== Delayed check (1 second) ===");
-    testElements();
-}, 1000);
-
-function testElements() {
-    console.log("--- Testing elements ---");
-
-    const btn = document.getElementById('ndCalculateDpiBtnV2');
-    const currentDpi = document.getElementById('ndCurrentDpiV2');
-    const monitorHeight = document.getElementById('ndMonitorVertRes');
-    const gameSelect = document.getElementById('ndGameSeriesV2');
-
-    console.log("Button found:", !!btn);
-    console.log("Current DPI input found:", !!currentDpi);
-    console.log("Monitor height input found:", !!monitorHeight);
-    console.log("Game select found:", !!gameSelect);
-
-    if (btn) {
-        console.log("Button element:", btn);
-        console.log("Button onclick property:", btn.onclick);
-        console.log("Button has existing event listeners:", !!btn._listeners);
-
-        // Test multiple event binding approaches
-
-        // Approach 1: addEventListener
-        console.log("Adding addEventListener...");
-        btn.addEventListener('click', function(e) {
-            console.log("addEventListener click fired!");
-            e.preventDefault();
-            alert("addEventListener worked!");
-        });
-
-        // Approach 2: onclick property
-        console.log("Setting onclick property...");
-        const originalOnclick = btn.onclick;
-        btn.onclick = function(e) {
-            console.log("onclick property fired!");
-            e.preventDefault();
-            alert("onclick property worked!");
-            if (originalOnclick) originalOnclick.call(this, e);
-        };
-
-            // Approach 3: setAttribute
-            console.log("Testing setAttribute...");
-            // btn.setAttribute('onclick', 'console.log("setAttribute worked!"); alert("setAttribute worked!");');
-
-            // Test if button is actually clickable
-            console.log("Button computed style display:", window.getComputedStyle(btn).display);
-            console.log("Button computed style visibility:", window.getComputedStyle(btn).visibility);
-            console.log("Button computed style pointer-events:", window.getComputedStyle(btn).pointerEvents);
-            console.log("Button offsetParent:", btn.offsetParent);
-
+function calculateDPI() {
+    console.log("calculateDPI function called");
+    
+    // Get all the elements
+    const currentDpiEl = document.getElementById('ndCurrentDpiV2');
+    const monitorVertResEl = document.getElementById('ndMonitorVertRes');
+    const gameSeriesEl = document.getElementById('ndGameSeriesV2');
+    const resultDiv = document.getElementById('ndDpiResultV2');
+    const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
+    const errorDiv = document.getElementById('ndDpiErrorV2');
+    
+    console.log("Elements found:", {
+        currentDpi: !!currentDpiEl,
+        monitorHeight: !!monitorVertResEl,
+        gameSelect: !!gameSeriesEl,
+        resultDiv: !!resultDiv,
+        calculatedValue: !!calculatedDpiValueEl,
+        errorDiv: !!errorDiv
+    });
+    
+    // Clear previous results
+    if (resultDiv) resultDiv.style.display = 'none';
+    if (errorDiv) {
+        errorDiv.style.display = 'none';
+        errorDiv.textContent = '';
+    }
+    
+    // Get input values
+    const currentDpiText = currentDpiEl ? currentDpiEl.value : '';
+    const monitorHeightText = monitorVertResEl ? monitorVertResEl.value : '';
+    const gameRenderHeightText = gameSeriesEl ? gameSeriesEl.value : '';
+    
+    console.log('Input values:', {
+        currentDpi: currentDpiText,
+        monitorHeight: monitorHeightText,
+        gameHeight: gameRenderHeightText
+    });
+    
+    // Parse values
+    const currentDpi = parseFloat(currentDpiText);
+    const monitorHeight = parseFloat(monitorHeightText);
+    const gameRenderHeight = parseFloat(gameRenderHeightText);
+    
+    console.log('Parsed values:', {
+        currentDpi: currentDpi,
+        monitorHeight: monitorHeight,
+        gameHeight: gameRenderHeight
+    });
+    
+    // Validation function
+    function showError(message) {
+        console.log('Showing error:', message);
+        if (errorDiv) {
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+        }
+    }
+    
+    // Input validation
+    if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 50000) {
+        showError('Please enter a valid current DPI (between 50-50000).');
+        return;
+    }
+    
+    if (isNaN(monitorHeight) || monitorHeight < gameRenderHeight || monitorHeight > 10000) {
+        showError(`Please enter a valid monitor height (at least ${gameRenderHeight} pixels for the selected game).`);
+        return;
+    }
+    
+    if (isNaN(gameRenderHeight) || gameRenderHeight <= 0) {
+        showError('Please select a valid game series.');
+        return;
+    }
+    
+    // Calculate new DPI
+    const scalingFactor = monitorHeight / gameRenderHeight;
+    const newDpi = currentDpi / scalingFactor;
+    
+    console.log('Calculation:', {
+        scalingFactor: scalingFactor,
+        newDpi: newDpi,
+        roundedDpi: Math.round(newDpi)
+    });
+    
+    // Validate result
+    if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
+        showError('Could not calculate DPI. Please check your inputs.');
+        return;
+    }
+    
+    // Display result
+    if (calculatedDpiValueEl && resultDiv) {
+        calculatedDpiValueEl.textContent = Math.round(newDpi);
+        resultDiv.style.display = 'block';
+        console.log('Result displayed successfully:', Math.round(newDpi));
     } else {
-        console.log("❌ Button not found!");
-
-        // Debug: find all buttons
-        const allButtons = document.querySelectorAll('button');
-        console.log("All buttons on page:", allButtons.length);
-        allButtons.forEach((button, index) => {
-            console.log(`Button ${index}:`, button.id, button.textContent.trim());
-        });
-
-        // Debug: find elements with similar IDs
-        const elementsWithNd = document.querySelectorAll('[id*="nd"]');
-        console.log("Elements with 'nd' in ID:", elementsWithNd);
+        console.error('Could not display result - elements missing');
     }
 }
 
-// Test 6: Click detection on document level
-document.addEventListener('click', function(e) {
-    if (e.target.id === 'ndCalculateDpiBtnV2') {
-        console.log("Document-level click detected on calculate button!");
-        alert("Document-level click worked!");
+// Set up event listeners when DOM is ready
+function setupCalculator() {
+    console.log("Setting up calculator...");
+    
+    const calculateBtn = document.getElementById('ndCalculateDpiBtnV2');
+    
+    if (!calculateBtn) {
+        console.error('Calculate button not found!');
+        return;
     }
-    console.log("Click detected on:", e.target.tagName, e.target.id, e.target.className);
-});
+    
+    console.log("Calculate button found, adding event listener");
+    
+    // Add click event listener
+    calculateBtn.addEventListener('click', function(e) {
+        console.log("Button clicked via addEventListener");
+        e.preventDefault();
+        calculateDPI();
+    });
+    
+    // Also set onclick as backup
+    calculateBtn.onclick = function(e) {
+        console.log("Button clicked via onclick");
+        e.preventDefault();
+        calculateDPI();
+    };
+    
+    // Clear results when inputs change
+    const inputs = [
+        document.getElementById('ndCurrentDpiV2'),
+        document.getElementById('ndMonitorVertRes'),
+        document.getElementById('ndGameSeriesV2')
+    ];
+    
+    inputs.forEach(input => {
+        if (input) {
+            input.addEventListener('input', function() {
+                const resultDiv = document.getElementById('ndDpiResultV2');
+                const errorDiv = document.getElementById('ndDpiErrorV2');
+                if (resultDiv) resultDiv.style.display = 'none';
+                if (errorDiv) errorDiv.style.display = 'none';
+            });
+        }
+    });
+    
+    console.log("Calculator setup complete");
+}
 
-console.log("=== Debug script setup complete ===");
+// Multiple ways to ensure setup runs
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupCalculator);
+} else {
+    setupCalculator();
+}
+
+// Backup setup on window load
+window.addEventListener('load', setupCalculator);
+
+console.log("DPI Calculator: Script loaded");
 
 </script>
 
