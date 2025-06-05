@@ -190,8 +190,8 @@ If you play the older games in full screen, you may notice your cursor moves way
 <div class="dpi-calculator-input-group">
     <label for="ndGameSeriesV2">ND Game/s (17-24 assume fullscreen 1 option):</label>
     <select id="ndGameSeriesV2" name="ndGameSeriesV2">
-        <option value="480">Games 1-16</option>
-        <option value="600">Games 17-24</option>
+        <option value="480">Games 1-15</option>
+        <option value="600">Games 16-24</option>
     </select>
 </div>
 
