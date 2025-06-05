@@ -239,7 +239,7 @@ function calculateDPI() {
     }
     
     if (isNaN(monitorHeight) || monitorHeight < gameRenderHeight || monitorHeight > 10000) {
-        showError(`Please enter a valid monitor height (at least ${gameRenderHeight} pixels for the selected game).`);
+        showError(`Please enter a valid monitor height (at least ${gameRenderHeight} pixels for the selected games).`);
         return;
     }
     
