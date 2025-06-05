@@ -64,14 +64,42 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-container select {
         width: 100%;
         padding: 12px;
-        border: 1px solid var(--color-input-border);
+        /* Provide fallback border colors that work in both light and dark modes */
+        border: 2px solid var(--color-input-border, var(--color-border, #ccc));
         border-radius: 5px;
         box-sizing: border-box;
         font-size: 1em;
-        background-color: var(--color-input-background);
-        color: var(--color-input-text);
+        background-color: var(--color-input-background, var(--color-background, #fff));
+        color: var(--color-input-text, var(--color-text, #333));
         min-height: 44px;
         line-height: 1.4;
+        transition: border-color 0.2s ease-in-out;
+    }
+
+    /* Ensure borders are visible in dark mode too */
+    @media (prefers-color-scheme: dark) {
+        .dpi-calculator-container input[type="number"],
+        .dpi-calculator-container select {
+            border-color: var(--color-input-border, var(--color-border, #555));
+            background-color: var(--color-input-background, var(--color-background, #2a2a2a));
+            color: var(--color-input-text, var(--color-text, #fff));
+        }
+    }
+
+    /* Additional fallback for when Retype variables aren't available */
+    .dpi-calculator-container input[type="number"]:not([style*="border"]),
+    .dpi-calculator-container select:not([style*="border"]) {
+        border: 2px solid #ccc !important;
+    }
+
+    /* Dark mode fallback */
+    [data-theme="dark"] .dpi-calculator-container input[type="number"]:not([style*="border"]),
+    [data-theme="dark"] .dpi-calculator-container select:not([style*="border"]),
+    .dark .dpi-calculator-container input[type="number"]:not([style*="border"]),
+    .dark .dpi-calculator-container select:not([style*="border"]) {
+        border: 2px solid #555 !important;
+        background-color: #2a2a2a !important;
+        color: #fff !important;
     }
     
     .dpi-calculator-container select {
