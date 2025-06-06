@@ -1,7 +1,7 @@
 ---
 label: Hardware
 layout: page
-order: -40
+order: 40
 icon: gear
 ---
 
@@ -21,7 +21,7 @@ Settings are also important. Navigate to your mouse settings in Windows, then cl
 
 You can instead adjust your mouse speed by changing your mouse's DPI. You should go for a relatively low sensitivity that still allows you plenty of physical room to move your mouse. These changes may feel jarring at first, but after quickly adjusting to them, they will feel much better.
 
-If you play the older games in full screen, you may notice your cursor moves way faster. A good solution is having a 2nd DPI option set in your mouse to compensate. Most gaming mice have software where you can set what DPI settings a button can switch between. If you want it to feel exactly the same as your desktop, use the calculator below to get a 2nd DPI value to use. 
+If you play the older games in full screen, you may notice your cursor moves way faster. A good solution is having a 2nd DPI option set in your mouse to compensate. Most gaming mice have software where you can set what DPI settings a button can switch between. If you want it to feel exactly the same as your desktop, use the calculator below to get a 2nd DPI value to use. ((((Positive 40 test))))
 
 <style>
     .dpi-calculator-container {
