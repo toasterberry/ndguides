@@ -1,7 +1,7 @@
 ---
 label: Getting the Games
 layout: page
-order: 0
+order: 1
 icon: credit-card
 ---
 

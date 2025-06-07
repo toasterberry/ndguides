@@ -1,7 +1,7 @@
 ---
 label: OBS Tips
 layout: page
-order: -20
+order: 20
 icon: play
 ---
 
