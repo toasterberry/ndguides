@@ -1,7 +1,6 @@
 ---
 label: Hardware
-layout: page
-order: 40
+order: -40
 icon: gear
 ---
 

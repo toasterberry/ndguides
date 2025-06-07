@@ -1,7 +1,6 @@
 ---
 label: RNG Manipulation
-layout: page
-order: 10
+order: -10
 icon: lock
 ---
 

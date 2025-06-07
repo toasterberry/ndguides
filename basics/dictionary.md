@@ -1,7 +1,6 @@
 ---
 label: Dictionary
-layout: page
-order: 50
+order: -50
 icon: book
 ---
 

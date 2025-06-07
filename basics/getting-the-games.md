@@ -1,7 +1,6 @@
 ---
 label: Getting the Games
-layout: page
-order: 1
+order: -1
 icon: credit-card
 ---
 
