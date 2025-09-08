@@ -9,51 +9,6 @@ links:
     link: /welcome.md
     icon: home
 
-nav:
-  - text: Home
-    link: /welcome.md
-    icon: home
-
-  - text: Routes
-    link: https://drive.google.com/folderview?id=1DOK5_Qu58Mfv8yhU_co3e7XBxv1IS5xg
-    icon: file-badge
-
-  - text: Basics
-    items:
-      - text: Getting the Games
-        link: /basics/getting-the-games/
-        icon: credit-card
-      - text: Getting Started
-        link: /basics/getting-started/
-        icon: checklist
-      - text: Improving
-        link: /basics/improving/
-        icon: rocket
-      - text: Older Games
-        link: /basics/older-games/
-        icon: issue-tracked-by
-      - text: Timer
-        link: /basics/timer/
-        icon: stopwatch
-      - text: Hardware
-        link: /basics/hardware/
-        icon: gear
-      - text: Dictionary
-        link: /basics/dictionary/
-        icon: book
-    expanded: true
-    order: 2
-    icon: mortar-board
-
-  - text: Advanced
-    items:
-      - text: RNG Manipulation
-        link: /advanced/rng-manip/
-        icon: lock
-      - text: OBS Tips
-        link: /advanced/obs-tips/
-        icon: play
-
 footer:
   copyright: "[Nancy Drew Speedrunning Discord](https://discordapp.com/invite/GWD8j8M)"
   links:
