@@ -16,8 +16,6 @@ Open the program, and drag your video on it. Press Space for start/pause, left/r
 
 First, let's find and set the start point. The exact point varies from game to game, so check your game and category's rules, in my example it's the first frame of the letter. Have the video paused, go to the rough area of this first frame, and use the comma and period keys to hone in on exactly the first frame you're looking for. Once you think you've found it, go back and forth a frame to make sure it is indeed correct, and once you're in the precise position where this first frame is currently visible on screen, press the "i" key.
 
-![](/videos/timing/cutstart.mp4)
-
 <figure class="cutstart">
   <video
     muted
@@ -25,10 +23,9 @@ First, let's find and set the start point. The exact point varies from game to g
     width="960"
     height="540"
   >
-    <source src="/videos/timing/cutstart.mp4" type="video/mp4">
+    <source src="/videos/timing/cutstart.webm" type="video/webm">
   </video>
 </figure>
-
 
 Now let's find the end. Also varies on game and category, for my example death% run it'll be the title screen, do check your game/category rules. Same idea as before, use the controls to navigate to the point where the first visible run end frame is visible, wiggle back and forth to make sure it's correct, then press "o" on your keyboard to set the end point.
 
