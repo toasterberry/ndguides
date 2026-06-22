@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/ndguides">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.835437056311">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.6.0.835437392370">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.6.0">
@@ -44,11 +44,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=4.6.0.835437056311" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.6.0.835437392370" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.835437056311" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.6.0.835437392370" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.6.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.835437056311" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.6.0.835437392370" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -173,6 +173,7 @@
 <figure class="cutstart">
   <video
     muted
+    controls
     playsinline
     width="960"
     height="540"
@@ -181,9 +182,16 @@
   </video>
 </figure>
 <p>Now let&#x27;s find the end. Also varies on game and category, for my example death% run it&#x27;ll be the title screen, do check your game/category rules. Same idea as before, use the controls to navigate to the point where the first visible run end frame is visible, wiggle back and forth to make sure it&#x27;s correct, then press &quot;o&quot; on your keyboard to set the end point.</p>
-<figure class="content-center">
-    <img src="../../videos/timing/cutend.mp4" alt="" class="max-w-full h-auto rounded-image-rounded border-image-border border-image-border-width" />
-    <figcaption class="caption"></figcaption>
+<figure class="cutend">
+  <video
+    muted
+    controls
+    playsinline
+    width="960"
+    height="540"
+  >
+    <source src="/videos/timing/cutend.webm" type="video/webm">
+  </video>
 </figure>
 <p>Now if you look at the segment you&#x27;ve created at the top right, you can see the precise time down to the millisecond, and even a frame count. That&#x27;s all there is to it!</p>
 <figure class="content-center">
