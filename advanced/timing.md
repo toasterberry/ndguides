@@ -18,6 +18,18 @@ First, let's find and set the start point. The exact point varies from game to g
 
 ![](/videos/timing/cutstart.mp4)
 
+<figure class="cutstart">
+  <video
+    muted
+    playsinline
+    width="960"
+    height="540"
+  >
+    <source src="/videos/timing/cutstart.mp4" type="video/mp4; codecs="vp9"">
+  </video>
+</figure>
+
+
 Now let's find the end. Also varies on game and category, for my example death% run it'll be the title screen, do check your game/category rules. Same idea as before, use the controls to navigate to the point where the first visible run end frame is visible, wiggle back and forth to make sure it's correct, then press "o" on your keyboard to set the end point.
 
 ![](/videos/timing/cutend.mp4)
