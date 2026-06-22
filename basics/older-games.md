@@ -10,7 +10,7 @@ Old Nancy Drew games have a handful of quirks you may run in to. This page will 
 
 ## No-CD Patches
 
-If you own physical copies of any Nancy Drew games 1-12, you'll likely find they require the disc inserted to start. It's not a good idea to speedrun any of these games by having the physical disc inserted due to increased loading times. There's two options to solve this:
+If you own physical copies of any Nancy Drew games 1-12, you'll likely find they require the disc inserted to start. It's not a good idea to speedrun any of these games by having the physical disc inserted due to increased loading times. There's two paths you can take to solve this:
 1. Backup the disc to an ISO with a tool like [InfraRecorder](https://sourceforge.net/projects/infrarecorder/)
 2. Apply a No-CD patch
 

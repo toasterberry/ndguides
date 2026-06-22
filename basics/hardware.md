@@ -20,7 +20,7 @@ Settings are also important. Navigate to your mouse settings in Windows, then cl
 
 You can instead adjust your mouse speed by changing your mouse's DPI. You should go for a relatively low sensitivity that still allows you plenty of physical room to move your mouse. These changes may feel jarring at first, but after quickly adjusting to them, they will feel much better.
 
-If you play the older games in full screen, you may notice your cursor moves way faster. A good solution is having a 2nd DPI option set in your mouse to compensate. Most gaming mice have software where you can set what DPI settings a button can switch between. If you want it to feel exactly the same as your desktop, use the calculator below to get a 2nd DPI value to use. ((((Positive 40 test))))
+If you play the older games in full screen, you may notice your cursor moves way faster. A good solution is having a 2nd DPI option set in your mouse to compensate. Most gaming mice have software where you can set a button to swap between DPI settings. If you want it to feel exactly the same as your desktop, use the calculator below to get a 2nd DPI value to use.
 
 <style>
     .dpi-calculator-container {
@@ -63,7 +63,6 @@ If you play the older games in full screen, you may notice your cursor moves way
     .dpi-calculator-container select {
         width: 100%;
         padding: 12px;
-        /* Use Retype's variables first, with visible fallbacks if they're transparent/missing */
         border: 2px solid var(--color-input-border, var(--color-border, rgba(0,0,0,0.2)));
         border-radius: 5px;
         box-sizing: border-box;
@@ -75,7 +74,6 @@ If you play the older games in full screen, you may notice your cursor moves way
         transition: border-color 0.2s ease-in-out;
     }
 
-    /* More specific selectors to avoid conflicts with Retype's navigation */
     .dpi-calculator-container .dpi-calculator-input-group input[type="number"] {
         border-color: var(--color-input-border, var(--color-border, rgba(0,0,0,0.2)));
     }
@@ -95,7 +93,6 @@ If you play the older games in full screen, you may notice your cursor moves way
         padding-right: 36px;
     }
 
-    /* Define arrow images as CSS variables that Retype can override */
     :root {
         --select-arrow-light: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
     }
@@ -212,14 +209,12 @@ function calculateDPI() {
     const calculatedDpiValueEl = document.getElementById('ndCalculatedDpiValueV2');
     const errorDiv = document.getElementById('ndDpiErrorV2');
     
-    // Clear previous results
     if (resultDiv) resultDiv.style.display = 'none';
     if (errorDiv) {
         errorDiv.style.display = 'none';
         errorDiv.textContent = '';
     }
     
-    // Get and parse input values
     const currentDpi = parseFloat(currentDpiEl ? currentDpiEl.value : '');
     const monitorHeight = parseFloat(monitorVertResEl ? monitorVertResEl.value : '');
     const gameRenderHeight = parseFloat(gameSeriesEl ? gameSeriesEl.value : '');
@@ -231,7 +226,6 @@ function calculateDPI() {
         }
     }
     
-    // Input validation
     if (isNaN(currentDpi) || currentDpi <= 0 || currentDpi > 500000) {
         showError('Please enter a valid current DPI (between 50-500000).');
         return;
@@ -247,17 +241,14 @@ function calculateDPI() {
         return;
     }
     
-    // Calculate new DPI
     const scalingFactor = monitorHeight / gameRenderHeight;
     const newDpi = currentDpi / scalingFactor;
     
-    // Validate result
     if (isNaN(newDpi) || newDpi <= 0 || !isFinite(newDpi)) {
         showError('Could not calculate DPI. Please check your inputs.');
         return;
     }
     
-    // Display result
     if (calculatedDpiValueEl && resultDiv) {
         calculatedDpiValueEl.textContent = Math.round(newDpi);
         resultDiv.style.display = 'block';
@@ -274,7 +265,6 @@ function setupCalculator() {
         calculateDPI();
     });
     
-    // Clear results when inputs change
     const inputs = [
         document.getElementById('ndCurrentDpiV2'),
         document.getElementById('ndMonitorVertRes'),
@@ -306,9 +296,11 @@ window.addEventListener('load', setupCalculator);
 
 Your monitor primarily affects your reaction time. Most modern displays have a small delay between receiving content and actually displaying it. It's not uncommon to find a display with 50-100ms+ of latency. 100ms might not seem like much, but with just 10 instances of you performing any action based on reaction time, you've lost a full second solely due to your display. TVs are most prone to heavy latency, and should generally be avoided. Most computer monitors are better than TVs, but can vary.
 
-Refresh rate is a separate matter, but it still affects the overall latency of your monitor. 60Hz is the most common refresh rate in general, and in the best of circumstances is still very usable. Higher refresh rates can reduce input latency because you have less time lost between changes on screen due to it changing more often. Not only do higher refresh rates reduce latency, they also just feel better to play. Everything looks and feels smoother, and that alone improves the overall experience.
+Refresh rate is how often your display updates its picture per second. 60Hz is the most common refresh rate, and in the best of circumstances is still usable. Higher refresh rates can reduce input latency because you have less time lost between changes on screen due to it changing more often. 60Hz means a 16ms gap per update, 120Hz means 8ms. Not only do higher refresh rates reduce latency, they also just feel better to play. Everything looks and feels smoother, and that alone improves the overall experience.
 
-While the monitor is important, you may run into diminishing returns pretty fast. A 120Hz or 144Hz "gaming" monitor is a great balance between price and performance. If money is no object, very high refresh rate OLED monitors provide the lowest input latency possible with modern displays. Though more niche, higher end retro CRT monitors can provide high refresh rates, 0 latency, and make the older ND games look amazing compared to modern displays. They're mainly worth considering if you already have one, or are already interested in them.
+A 120Hz or 144Hz "gaming" monitor is a great balance between price and performance. If money is no object, very high refresh rate OLED monitors provide the lowest input latency possible with modern displays. Though more niche, old CRT monitors can provide high refresh rates, 0 latency, and make the older ND games look amazing compared to modern displays. If you have an old one lying around, it is a better option than any given 60Hz LCD monitor.
+
+One display type to avoid at all costs is "VA". While IPS/TN/whatever can vary, VA even on high refresh rates should not be considered due to its extremely heavy smearing.
 
 ## Storage
 
@@ -318,6 +310,6 @@ If you only have access to a HDD, navigating throughout the game before starting
 
 ## Computer
 
-As long as you're using anything relatively modern, the rest of your computer's hardware shouldn't matter too much for games before Midnight in Salem. Even a budget "gaming" PC from 6+ years ago should be more than capable of playing this series while recording/streaming with good performance. Many laptops are very usable as well. You might find small increases in time with higher end hardware, but it's likely negligible in many cases.
+As long as you're using anything relatively modern, the rest of your computer's hardware shouldn't matter too much for games before Midnight in Salem. Even a budget "gaming" PC from 8+ years ago should be more than capable of playing this series while recording/streaming with good performance. Many laptops are very usable as well. You might find small increases in time with higher end hardware, but it's likely negligible in many cases.
 
 With the most recent games in the 3D engine, your CPU and GPU can affect performance substantially. Thankfully, nobody runs these.

@@ -30,4 +30,4 @@ That's it! Wait for your run to be verified, and you'll officially have a run on
 
 ## What's next?
 
-If you want to setup a timer for your videos, [we have a guide for that](/basics/timer.md). It's pretty easy. If you want tips on improvement, check [this page](/basics/improving.md) out.
+If you want to setup a timer for your videos, [we have a guide for that](/basics/timer.md). It's easy if you take it one step at a time. If you want tips on improvement, check [this page](/basics/improving.md) out.

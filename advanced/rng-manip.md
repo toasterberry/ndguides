@@ -6,21 +6,21 @@ icon: lock
 
 # RNG Manipulation
 
-Randomness can be your worst enemy in speedrunning. It can cause you to lose a run purely because of a factor that is out of your control. But what if you could control it?
+Randomness can be your worst enemy in speedrunning. It's a factor out of your control that can cost you runs. But what if you could control it?
 
-In Nancy Drew games 1-32?, randomness is based on your computer's clock. This means if your computer's clock were to hypothetically freeze, every random event would now have a predictable outcome. This means you could set your computer's clock to a certain time to manipulate the outcome of random events in your favor. However, changing your computer's clock is a pain, especially if you want to do something like use the internet between runs.
+In Nancy Drew games 1-32?, randomness is based on your computer's clock. This means if your computer's clock were to hypothetically freeze, every random event would now have a predictable outcome. But changing your computer's clock is a pain, especially if you want to do something like use the internet between runs.
 
 # RunAsDate
 
-This is where RunAsDate comes into play. It allows us to run a program with a specific time and date. With this, we can easily set what time and date we want, and quickly reopen the game at that set time. 
+This is where RunAsDate comes into play. It allows us to run just a specific program at a set time and date, making it easy to launch the game repeatedly with the same predictable outcome.
 
-Head to [this site](https://www.nirsoft.net/utils/run_as_date.html), scroll down just above the languages, and click "Download RunAsDate" (Not x64). Go to your downloads folder, right click the newly downloaded file, click "Extract All", and "Extract". RunAsDate will now be in its own folder, and you can put it anywhere you like.
+Go to [this site](https://www.nirsoft.net/utils/run_as_date.html), scroll down just above the languages, and click "Download RunAsDate" (Not x64). Go to your downloads folder, right click the newly downloaded file, click "Extract All", and "Extract". RunAsDate will now be in its own folder, and you can put it anywhere you like.
 
-Using RunAsDate differs depending on what version of the game you're using. If you're using the disc or a Her digital download, continue to the Her Versions below. If you have the Steam versions, skip to [Steam Versions](/advanced/rng-manip.md/#steam-versions).
+Using RunAsDate differs depending on what version of the game you're using. If you're using a disc or a HeR digital download version, continue to the HeR Versions section below. If you have the Steam versions, skip to [Steam Versions](/advanced/rng-manip.md/#steam-versions).
 
-## Her Versions
+## HeR Versions
 
-Open the RunAsDate program, which is the icon with the calendar and not a yellow question mark. At the top right of the window, click "Browse...". Navigate to the game you want to use it with. If you have a shortcut to the game on your desktop, you can right click it and click "Open file location" to open the folder it's installed to. You can copy the address at the top and paste it into the RunAsDate window where you're selecting the game, and press enter to bring you right to it. Double click the game file to select it. Continue to the [Configuration](/advanced/rng-manip.md/#configuration) section
+Open the RunAsDate program, the icon with the calendar, not the yellow question mark. At the top right of the window, click "Browse...". Navigate to the game you want to use it with. If you have a shortcut to the game on your desktop, you can right click it and click "Open file location" to open the folder it's installed to. You can copy the address at the top and paste it into the RunAsDate window where you're selecting the game, and press enter to bring you right to it. Double click the game file to select it. Continue to the [Configuration](/advanced/rng-manip.md/#configuration) section
 
 ## Steam Versions
 
@@ -32,6 +32,10 @@ Open Steam, launch the game as you normally would, and you should see the RunAsD
 
 ## Configuration
 
-Next, untick "Move the time forward according to the real time", then tick "Immediate Mode". The time and date you set is your "seed". Using RAD at all makes random events predictable, but changing the time and date affects what outcome they have. Routes may have seeds included, but you can also find your own or ask community members for some.
+Untick "Move the time forward according to the real time", then tick "Immediate Mode". The time and date you set is your "seed". Using RAD at all makes random events predictable, but changing the time and date affects what outcome they have. Routes may have seeds included, but you can also find your own or ask community members for some.
 
 If you're not getting the same results with someone else's seed, try setting it forward or back an hour at a time a few hours each way, possibly more if you're not in North America. Time zones and time changes seem to affect the seeds.
+
+## Randomness
+
+Though RNG manipulation will cause perfectly predictable outcomes, this doesn't mean the outcome of every random event will be identical in every live scenario. In earlier games, the outcome of a random event is determined just based on the seed, so as long as you have a seed, every random event itself will be the same in any order. Starting with game #X (xxx), random events also consider an internal value that's incremented by various movement and actions, meaning the order of and additional actions can affect the outcome. One wrong move and the outcome may be change, yet still predictably given the exact sequence that took place. Because of this, you can learn the outcomes for accidentally making a wrong move or two so that your run can keep going. 
