@@ -19,3 +19,4 @@
 
 - [RNG Manipulation](https://toasterberry.github.io/ndguides/advanced/rng-manip.md): Randomness can be your worst enemy in speedrunning. It's a factor out of your control that can cost you runs. But what if you could control it?
 - [OBS Tips](https://toasterberry.github.io/ndguides/advanced/obs-tips.md): Here's some tips for making your OBS recordings/streams look good with ND games.
+- [Timing](https://toasterberry.github.io/ndguides/advanced/timing.md): While all runs will be timed by moderators, it can be helpful to know how to time a run yourself to know precisely where your run stands.
