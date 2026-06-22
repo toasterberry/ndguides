@@ -1,0 +1,21 @@
+﻿# Home
+
+> This site is under construction! Some information may be placeholder or incorrect while the site is being written and reviewed.
+
+- [Home](https://toasterberry.github.io/ndguides/welcome.md): Home
+- [License](https://toasterberry.github.io/ndguides/license.md): Creative Commons Legal Code
+
+## Basics
+
+- [Getting the Games](https://toasterberry.github.io/ndguides/basics/getting-the-games.md): Digital versions of the games are available primarily from three storefronts:
+- [Getting Started](https://toasterberry.github.io/ndguides/basics/getting-started.md): To speedrun a Nancy Drew game, all you technically need to do is try to beat it fast. But you probably want to record and submit your run to speedrun.com. This is a basic guide on how to do that.
+- [Improving](https://toasterberry.github.io/ndguides/basics/improving.md): To improve your times, play more. But of course, there's more to it than just that.
+- [Older Games](https://toasterberry.github.io/ndguides/basics/older-games.md): Old Nancy Drew games have a handful of quirks you may run in to. This page will document various of these with available workarounds.
+- [Timer](https://toasterberry.github.io/ndguides/basics/timer.md): The on-screen timer is a staple in speedrunning videos and live streams. Though not required, it gives you a good idea of your performance throughout. Although you can use any kind of timer, LiveSplit is the go-to.
+- [Hardware](https://toasterberry.github.io/ndguides/basics/hardware.md): Almost every piece of hardware related to operating Nancy Drew games can impact your play to some degree. If you're new or are speedrunning more for fun, don't worry about this page too much.
+- [Dictionary](https://toasterberry.github.io/ndguides/basics/dictionary.md): You may see some acronyms or phrases floating around that you're not familiar with, so here's a dictionary of as many as possible.
+
+## Advanced
+
+- [RNG Manipulation](https://toasterberry.github.io/ndguides/advanced/rng-manip.md): Randomness can be your worst enemy in speedrunning. It's a factor out of your control that can cost you runs. But what if you could control it?
+- [OBS Tips](https://toasterberry.github.io/ndguides/advanced/obs-tips.md): Here's some tips for making your OBS recordings/streams look good with ND games.
