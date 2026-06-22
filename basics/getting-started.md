@@ -16,7 +16,7 @@ Coming soon.
 
 ## Running
 
-Before you run a game, you should look it up on [speedrun.com](https://www.speedrun.com/) and read the game and category rules. Checking out routes and pre-existing runs will be helpful too. Once you're ready, start recording and begin a run.
+Before you run a game, you should look it up on [speedrun.com](https://www.speedrun.com/) and read the game and category rules. Checking out [routes](https://drive.google.com/folderview?id=1DOK5_Qu58Mfv8yhU_co3e7XBxv1IS5xg) and pre-existing runs will be helpful too. Once you're ready, start recording and begin a run.
 
 {file management and timing}
 
@@ -25,6 +25,8 @@ Before you run a game, you should look it up on [speedrun.com](https://www.speed
 Once you have a run you're ready to submit, you'll need to upload it somewhere. If you livestreamed it on Twitch, you can make a highlight and use that. Otherwise, upload your recording to YouTube. It can be public or unlisted.
 
 Now to submit the video to the [speedrun.com](https://www.speedrun.com/) leaderboards. Make an account there if you don't have one already, and navigate to the game and category you ran. Click "Submit run" and fill out the information.
+
+You'll need to provide a time, you can give a rough estimate and let the moderators precisely time it, or if you want to know the precise time sooner yourself, check out the [timing guide](/advanced/timing.md). Moderators will have to time it themselves either way.
 
 That's it! Wait for your run to be verified, and you'll officially have a run on the leaderboards.
 
