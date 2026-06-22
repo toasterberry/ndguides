@@ -25,7 +25,7 @@ First, let's find and set the start point. The exact point varies from game to g
     width="960"
     height="540"
   >
-    <source src="/videos/timing/cutstart.mp4" type="video/mp4; codecs="vp9"">
+    <source src="/videos/timing/cutstart.mp4" type="video/mp4">
   </video>
 </figure>
 
