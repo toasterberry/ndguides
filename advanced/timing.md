@@ -19,6 +19,7 @@ First, let's find and set the start point. The exact point varies from game to g
 <figure class="cutstart">
   <video
     muted
+    controls
     playsinline
     width="960"
     height="540"
@@ -29,7 +30,17 @@ First, let's find and set the start point. The exact point varies from game to g
 
 Now let's find the end. Also varies on game and category, for my example death% run it'll be the title screen, do check your game/category rules. Same idea as before, use the controls to navigate to the point where the first visible run end frame is visible, wiggle back and forth to make sure it's correct, then press "o" on your keyboard to set the end point.
 
-![](/videos/timing/cutend.mp4)
+<figure class="cutend">
+  <video
+    muted
+    controls
+    playsinline
+    width="960"
+    height="540"
+  >
+    <source src="/videos/timing/cutend.webm" type="video/webm">
+  </video>
+</figure>
 
 Now if you look at the segment you've created at the top right, you can see the precise time down to the millisecond, and even a frame count. That's all there is to it!
 
